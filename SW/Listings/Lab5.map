@@ -1,0 +1,1455 @@
+Component: ARM Compiler 6.16 Tool: armlink [5dfeaa00]
+
+==============================================================================
+
+Section Cross References
+
+    startup.o(RESET) refers to startup.o(STACK) for StackMem
+    startup.o(RESET) refers to buttons.o(.text.GPIOPortB_Handler) for GPIOPortB_Handler
+    startup.o(RESET) refers to buttons.o(.text.GPIOPortC_Handler) for GPIOPortC_Handler
+    startup.o(RESET) refers to timer0a.o(.text.Timer0A_Handler) for Timer0A_Handler
+    startup.o(RESET) refers to timer1a.o(.text.Timer1A_Handler) for Timer1A_Handler
+    startup.o(RESET) refers to timer2a.o(.text.Timer2A_Handler) for Timer2A_Handler
+    startup.o(RESET) refers to timer3a.o(.text.Timer3A_Handler) for Timer3A_Handler
+    startup.o(RESET) refers to timer4a.o(.text.Timer4A_Handler) for Timer4A_Handler
+    startup.o(RESET) refers to dmatimer.o(.text.Timer5A_Handler) for Timer5A_Handler
+    startup.o(RESET) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    musicgloves.o(.text.main_NeoPixel) refers to startup.o(.text) for DisableInterrupts
+    musicgloves.o(.text.main_NeoPixel) refers to pll.o(.text.PLL_Init) for PLL_Init
+    musicgloves.o(.text.main_NeoPixel) refers to neopixel.o(.text.NeoPixel_Init) for NeoPixel_Init
+    musicgloves.o(.text.main_NeoPixel) refers to neopixel.o(.text.SetNeoNotes) for SetNeoNotes
+    musicgloves.o(.text.main_NeoPixel) refers to neopixel.o(.text.setBrightness) for setBrightness
+    musicgloves.o(.ARM.exidx.text.main_NeoPixel) refers to musicgloves.o(.text.main_NeoPixel) for [Anonymous Symbol]
+    musicgloves.o(.text.main_Chords) refers to startup.o(.text) for DisableInterrupts
+    musicgloves.o(.text.main_Chords) refers to launchpad.o(.text.LaunchPad_Init) for LaunchPad_Init
+    musicgloves.o(.text.main_Chords) refers to pll.o(.text.PLL_Init) for PLL_Init
+    musicgloves.o(.text.main_Chords) refers to dac.o(.text.DAC_Init) for DAC_Init
+    musicgloves.o(.text.main_Chords) refers to music.o(.text.Play4Notes) for Play4Notes
+    musicgloves.o(.ARM.exidx.text.main_Chords) refers to musicgloves.o(.text.main_Chords) for [Anonymous Symbol]
+    musicgloves.o(.text.main_keypad) refers to startup.o(.text) for DisableInterrupts
+    musicgloves.o(.text.main_keypad) refers to launchpad.o(.text.LaunchPad_Init) for LaunchPad_Init
+    musicgloves.o(.text.main_keypad) refers to pll.o(.text.PLL_Init) for PLL_Init
+    musicgloves.o(.text.main_keypad) refers to buttons.o(.text.Keypad_Init) for Keypad_Init
+    musicgloves.o(.text.main_keypad) refers to buttons.o(.text.Keypad_Get) for Keypad_Get
+    musicgloves.o(.ARM.exidx.text.main_keypad) refers to musicgloves.o(.text.main_keypad) for [Anonymous Symbol]
+    musicgloves.o(.text.main_lcddisplay) refers to startup.o(.text) for DisableInterrupts
+    musicgloves.o(.text.main_lcddisplay) refers to pll.o(.text.PLL_Init) for PLL_Init
+    musicgloves.o(.text.main_lcddisplay) refers to st7735.o(.text.ST7735_InitR) for ST7735_InitR
+    musicgloves.o(.text.main_lcddisplay) refers to st7735.o(.text.ST7735_FillScreen) for ST7735_FillScreen
+    musicgloves.o(.text.main_lcddisplay) refers to graphics.o(.text.DrawInstrumentMenu) for DrawInstrumentMenu
+    musicgloves.o(.ARM.exidx.text.main_lcddisplay) refers to musicgloves.o(.text.main_lcddisplay) for [Anonymous Symbol]
+    musicgloves.o(.text.main_flex) refers to startup.o(.text) for DisableInterrupts
+    musicgloves.o(.text.main_flex) refers to pll.o(.text.PLL_Init) for PLL_Init
+    musicgloves.o(.text.main_flex) refers to flexsensor.o(.text.Flex_Init) for Flex_Init
+    musicgloves.o(.text.main_flex) refers to flexsensor.o(.text.Return_Note) for Return_Note
+    musicgloves.o(.ARM.exidx.text.main_flex) refers to musicgloves.o(.text.main_flex) for [Anonymous Symbol]
+    musicgloves.o(.text.main_flex_music) refers to startup.o(.text) for DisableInterrupts
+    musicgloves.o(.text.main_flex_music) refers to launchpad.o(.text.LaunchPad_Init) for LaunchPad_Init
+    musicgloves.o(.text.main_flex_music) refers to pll.o(.text.PLL_Init) for PLL_Init
+    musicgloves.o(.text.main_flex_music) refers to dac.o(.text.DAC_Init) for DAC_Init
+    musicgloves.o(.text.main_flex_music) refers to flexsensor.o(.text.Flex_Init) for Flex_Init
+    musicgloves.o(.text.main_flex_music) refers to flexsensor.o(.text.Return_Note) for Return_Note
+    musicgloves.o(.text.main_flex_music) refers to flexsensor.o(.text.Return_Chord) for Return_Chord
+    musicgloves.o(.text.main_flex_music) refers to flexsensor.o(.text.Return_Volume) for Return_Volume
+    musicgloves.o(.text.main_flex_music) refers to music.o(.text.PlayNotes) for PlayNotes
+    musicgloves.o(.text.main_flex_music) refers to music.o(.text.SetVolume) for SetVolume
+    musicgloves.o(.ARM.exidx.text.main_flex_music) refers to musicgloves.o(.text.main_flex_music) for [Anonymous Symbol]
+    musicgloves.o(.text.main_idk) refers to startup.o(.text) for DisableInterrupts
+    musicgloves.o(.text.main_idk) refers to pll.o(.text.PLL_Init) for PLL_Init
+    musicgloves.o(.text.main_idk) refers to buttons.o(.text.Button_Init) for Button_Init
+    musicgloves.o(.text.main_idk) refers to buttons.o(.text.Keypad_Init) for Keypad_Init
+    musicgloves.o(.text.main_idk) refers to buttons.o(.text.SlidePot_Init) for SlidePot_Init
+    musicgloves.o(.text.main_idk) refers to dac.o(.text.DAC_Init) for DAC_Init
+    musicgloves.o(.text.main_idk) refers to st7735.o(.text.ST7735_InitR) for ST7735_InitR
+    musicgloves.o(.text.main_idk) refers to neopixel.o(.text.NeoPixel_Init) for NeoPixel_Init
+    musicgloves.o(.text.main_idk) refers to buttons.o(.text.GetVolume) for GetVolume
+    musicgloves.o(.text.main_idk) refers to music.o(.text.Play1Note) for Play1Note
+    musicgloves.o(.text.main_idk) refers to st7735.o(.text.ST7735_FillScreen) for ST7735_FillScreen
+    musicgloves.o(.text.main_idk) refers to graphics.o(.text.DrawFirstNote) for DrawFirstNote
+    musicgloves.o(.text.main_idk) refers to neopixel.o(.text.SetNeoNotes) for SetNeoNotes
+    musicgloves.o(.text.main_idk) refers to neopixel.o(.text.setBrightness) for setBrightness
+    musicgloves.o(.text.main_idk) refers to buttons.o(.text.Keypad_Get) for Keypad_Get
+    musicgloves.o(.text.main_idk) refers to music.o(.text.SetVolume) for SetVolume
+    musicgloves.o(.text.main_idk) refers to music.o(.text.SetMetronome) for SetMetronome
+    musicgloves.o(.text.main_idk) refers to graphics.o(.text.FlipMetronomeOn) for FlipMetronomeOn
+    musicgloves.o(.text.main_idk) refers to graphics.o(.text.FlipMetronomeOff) for FlipMetronomeOff
+    musicgloves.o(.text.main_idk) refers to buttons.o(.text.GetSW2) for GetSW2
+    musicgloves.o(.text.main_idk) refers to graphics.o(.text.DrawFourNotes) for DrawFourNotes
+    musicgloves.o(.text.main_idk) refers to music.o(.text.Play4Notes) for Play4Notes
+    musicgloves.o(.text.main_idk) refers to buttons.o(.text.GetSW3) for GetSW3
+    musicgloves.o(.ARM.exidx.text.main_idk) refers to musicgloves.o(.text.main_idk) for [Anonymous Symbol]
+    musicgloves.o(.text.main_final) refers to startup.o(.text) for DisableInterrupts
+    musicgloves.o(.text.main_final) refers to pll.o(.text.PLL_Init) for PLL_Init
+    musicgloves.o(.text.main_final) refers to buttons.o(.text.Button_Init) for Button_Init
+    musicgloves.o(.text.main_final) refers to buttons.o(.text.Keypad_Init) for Keypad_Init
+    musicgloves.o(.text.main_final) refers to buttons.o(.text.SlidePot_Init) for SlidePot_Init
+    musicgloves.o(.text.main_final) refers to st7735.o(.text.ST7735_InitR) for ST7735_InitR
+    musicgloves.o(.text.main_final) refers to neopixel.o(.text.NeoPixel_Init) for NeoPixel_Init
+    musicgloves.o(.text.main_final) refers to dac.o(.text.DAC_Init) for DAC_Init
+    musicgloves.o(.text.main_final) refers to st7735.o(.text.ST7735_FillScreen) for ST7735_FillScreen
+    musicgloves.o(.text.main_final) refers to neopixel.o(.text.SetNeoNotes) for SetNeoNotes
+    musicgloves.o(.text.main_final) refers to music.o(.text.Play1Note) for Play1Note
+    musicgloves.o(.text.main_final) refers to buttons.o(.text.Keypad_Get) for Keypad_Get
+    musicgloves.o(.text.main_final) refers to graphics.o(.text.FlipMetronomeOff) for FlipMetronomeOff
+    musicgloves.o(.text.main_final) refers to graphics.o(.text.FlipMetronomeOn) for FlipMetronomeOn
+    musicgloves.o(.ARM.exidx.text.main_final) refers to musicgloves.o(.text.main_final) for [Anonymous Symbol]
+    launchpad.o(.ARM.exidx.text.LaunchPad_Init) refers to launchpad.o(.text.LaunchPad_Init) for [Anonymous Symbol]
+    launchpad.o(.ARM.exidx.text.LaunchPad_Input) refers to launchpad.o(.text.LaunchPad_Input) for [Anonymous Symbol]
+    launchpad.o(.text.LaunchPad_WaitForTouch) refers to launchpad.o(.text.DelayMs) for DelayMs
+    launchpad.o(.ARM.exidx.text.LaunchPad_WaitForTouch) refers to launchpad.o(.text.LaunchPad_WaitForTouch) for [Anonymous Symbol]
+    launchpad.o(.ARM.exidx.text.DelayMs) refers to launchpad.o(.text.DelayMs) for [Anonymous Symbol]
+    launchpad.o(.text.LaunchPad_WaitForRelease) refers to launchpad.o(.text.DelayMs) for DelayMs
+    launchpad.o(.ARM.exidx.text.LaunchPad_WaitForRelease) refers to launchpad.o(.text.LaunchPad_WaitForRelease) for [Anonymous Symbol]
+    launchpad.o(.ARM.exidx.text.LaunchPad_Output) refers to launchpad.o(.text.LaunchPad_Output) for [Anonymous Symbol]
+    texas.o(.ARM.exidx.text.Scope) refers to texas.o(.text.Scope) for [Anonymous Symbol]
+    texas.o(.ARM.exidx.text.Timer5A_Stop) refers to texas.o(.text.Timer5A_Stop) for [Anonymous Symbol]
+    texas.o(.ARM.exidx.text.UART_Init) refers to texas.o(.text.UART_Init) for [Anonymous Symbol]
+    texas.o(.ARM.exidx.text.ADC1_InitPD3) refers to texas.o(.text.ADC1_InitPD3) for [Anonymous Symbol]
+    texas.o(.ARM.exidx.text.ADC1_Init_PD2) refers to texas.o(.text.ADC1_Init_PD2) for [Anonymous Symbol]
+    texas.o(.ARM.exidx.text.ADC1_Init_PE2) refers to texas.o(.text.ADC1_Init_PE2) for [Anonymous Symbol]
+    texas.o(.ARM.exidx.text.ADC1_Init_PB5) refers to texas.o(.text.ADC1_Init_PB5) for [Anonymous Symbol]
+    texas.o(.ARM.exidx.text.LogicAnalyzerA) refers to texas.o(.text.LogicAnalyzerA) for [Anonymous Symbol]
+    texas.o(.ARM.exidx.text.LogicAnalyzerB) refers to texas.o(.text.LogicAnalyzerB) for [Anonymous Symbol]
+    texas.o(.ARM.exidx.text.LogicAnalyzerC) refers to texas.o(.text.LogicAnalyzerC) for [Anonymous Symbol]
+    texas.o(.ARM.exidx.text.LogicAnalyzerE) refers to texas.o(.text.LogicAnalyzerE) for [Anonymous Symbol]
+    texas.o(.ARM.exidx.text.LogicAnalyzerF) refers to texas.o(.text.LogicAnalyzerF) for [Anonymous Symbol]
+    texas.o(.text.TExaS_Stop) refers to texas.o(.text.Timer5A_Stop) for Timer5A_Stop
+    texas.o(.ARM.exidx.text.TExaS_Stop) refers to texas.o(.text.TExaS_Stop) for [Anonymous Symbol]
+    st7735.o(.ARM.exidx.text.Delay1ms) refers to st7735.o(.text.Delay1ms) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_InitB) refers to st7735.o(.rodata.Bcmd) for Bcmd
+    st7735.o(.text.ST7735_InitB) refers to st7735.o(.text.commonInit) for commonInit
+    st7735.o(.text.ST7735_InitB) refers to st7735.o(.text.ST7735_SetCursor) for ST7735_SetCursor
+    st7735.o(.text.ST7735_InitB) refers to st7735.o(.data.StTextColor) for StTextColor
+    st7735.o(.text.ST7735_InitB) refers to st7735.o(.text.ST7735_FillScreen) for ST7735_FillScreen
+    st7735.o(.ARM.exidx.text.ST7735_InitB) refers to st7735.o(.text.ST7735_InitB) for [Anonymous Symbol]
+    st7735.o(.text.commonInit) refers to st7735.o(.bss.RowStart) for RowStart
+    st7735.o(.text.commonInit) refers to st7735.o(.bss.ColStart) for ColStart
+    st7735.o(.text.commonInit) refers to st7735.o(.text.Delay1ms) for Delay1ms
+    st7735.o(.text.commonInit) refers to st7735.o(.text.commandList) for commandList
+    st7735.o(.ARM.exidx.text.commonInit) refers to st7735.o(.text.commonInit) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_SetCursor) refers to st7735.o(.bss.StX) for StX
+    st7735.o(.text.ST7735_SetCursor) refers to st7735.o(.bss.StY) for StY
+    st7735.o(.ARM.exidx.text.ST7735_SetCursor) refers to st7735.o(.text.ST7735_SetCursor) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_FillScreen) refers to st7735.o(.data._width) for _width
+    st7735.o(.text.ST7735_FillScreen) refers to st7735.o(.data._height) for _height
+    st7735.o(.text.ST7735_FillScreen) refers to st7735.o(.text.ST7735_FillRect) for ST7735_FillRect
+    st7735.o(.ARM.exidx.text.ST7735_FillScreen) refers to st7735.o(.text.ST7735_FillScreen) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_InitR) refers to st7735.o(.rodata.Rcmd1) for Rcmd1
+    st7735.o(.text.ST7735_InitR) refers to st7735.o(.text.commonInit) for commonInit
+    st7735.o(.text.ST7735_InitR) refers to st7735.o(.rodata.Rcmd2green) for Rcmd2green
+    st7735.o(.text.ST7735_InitR) refers to st7735.o(.text.commandList) for commandList
+    st7735.o(.text.ST7735_InitR) refers to st7735.o(.bss.ColStart) for ColStart
+    st7735.o(.text.ST7735_InitR) refers to st7735.o(.bss.RowStart) for RowStart
+    st7735.o(.text.ST7735_InitR) refers to st7735.o(.rodata.Rcmd2red) for Rcmd2red
+    st7735.o(.text.ST7735_InitR) refers to st7735.o(.rodata.Rcmd3) for Rcmd3
+    st7735.o(.text.ST7735_InitR) refers to st7735.o(.text.writecommand) for writecommand
+    st7735.o(.text.ST7735_InitR) refers to st7735.o(.text.writedata) for writedata
+    st7735.o(.text.ST7735_InitR) refers to st7735.o(.bss.TabColor) for TabColor
+    st7735.o(.text.ST7735_InitR) refers to st7735.o(.text.ST7735_SetCursor) for ST7735_SetCursor
+    st7735.o(.text.ST7735_InitR) refers to st7735.o(.data.StTextColor) for StTextColor
+    st7735.o(.text.ST7735_InitR) refers to st7735.o(.text.ST7735_FillScreen) for ST7735_FillScreen
+    st7735.o(.ARM.exidx.text.ST7735_InitR) refers to st7735.o(.text.ST7735_InitR) for [Anonymous Symbol]
+    st7735.o(.text.commandList) refers to st7735.o(.text.writecommand) for writecommand
+    st7735.o(.text.commandList) refers to st7735.o(.text.writedata) for writedata
+    st7735.o(.text.commandList) refers to st7735.o(.text.Delay1ms) for Delay1ms
+    st7735.o(.ARM.exidx.text.commandList) refers to st7735.o(.text.commandList) for [Anonymous Symbol]
+    st7735.o(.ARM.exidx.text.writecommand) refers to st7735.o(.text.writecommand) for [Anonymous Symbol]
+    st7735.o(.ARM.exidx.text.writedata) refers to st7735.o(.text.writedata) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_DrawPixel) refers to st7735.o(.data._width) for _width
+    st7735.o(.text.ST7735_DrawPixel) refers to st7735.o(.data._height) for _height
+    st7735.o(.text.ST7735_DrawPixel) refers to st7735.o(.text.setAddrWindow) for setAddrWindow
+    st7735.o(.text.ST7735_DrawPixel) refers to st7735.o(.text.pushColor) for pushColor
+    st7735.o(.text.ST7735_DrawPixel) refers to st7735.o(.text.deselect) for deselect
+    st7735.o(.ARM.exidx.text.ST7735_DrawPixel) refers to st7735.o(.text.ST7735_DrawPixel) for [Anonymous Symbol]
+    st7735.o(.text.setAddrWindow) refers to st7735.o(.text.writecommand) for writecommand
+    st7735.o(.text.setAddrWindow) refers to st7735.o(.text.writedata) for writedata
+    st7735.o(.text.setAddrWindow) refers to st7735.o(.bss.ColStart) for ColStart
+    st7735.o(.text.setAddrWindow) refers to st7735.o(.bss.RowStart) for RowStart
+    st7735.o(.ARM.exidx.text.setAddrWindow) refers to st7735.o(.text.setAddrWindow) for [Anonymous Symbol]
+    st7735.o(.text.pushColor) refers to st7735.o(.text.writedata) for writedata
+    st7735.o(.ARM.exidx.text.pushColor) refers to st7735.o(.text.pushColor) for [Anonymous Symbol]
+    st7735.o(.ARM.exidx.text.deselect) refers to st7735.o(.text.deselect) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_DrawFastVLine) refers to st7735.o(.data._width) for _width
+    st7735.o(.text.ST7735_DrawFastVLine) refers to st7735.o(.data._height) for _height
+    st7735.o(.text.ST7735_DrawFastVLine) refers to st7735.o(.text.setAddrWindow) for setAddrWindow
+    st7735.o(.text.ST7735_DrawFastVLine) refers to st7735.o(.text.writedata) for writedata
+    st7735.o(.text.ST7735_DrawFastVLine) refers to st7735.o(.text.deselect) for deselect
+    st7735.o(.ARM.exidx.text.ST7735_DrawFastVLine) refers to st7735.o(.text.ST7735_DrawFastVLine) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_DrawFastHLine) refers to st7735.o(.data._width) for _width
+    st7735.o(.text.ST7735_DrawFastHLine) refers to st7735.o(.data._height) for _height
+    st7735.o(.text.ST7735_DrawFastHLine) refers to st7735.o(.text.setAddrWindow) for setAddrWindow
+    st7735.o(.text.ST7735_DrawFastHLine) refers to st7735.o(.text.writedata) for writedata
+    st7735.o(.text.ST7735_DrawFastHLine) refers to st7735.o(.text.deselect) for deselect
+    st7735.o(.ARM.exidx.text.ST7735_DrawFastHLine) refers to st7735.o(.text.ST7735_DrawFastHLine) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_FillRect) refers to st7735.o(.data._width) for _width
+    st7735.o(.text.ST7735_FillRect) refers to st7735.o(.data._height) for _height
+    st7735.o(.text.ST7735_FillRect) refers to st7735.o(.text.setAddrWindow) for setAddrWindow
+    st7735.o(.text.ST7735_FillRect) refers to st7735.o(.text.writedata) for writedata
+    st7735.o(.text.ST7735_FillRect) refers to st7735.o(.text.deselect) for deselect
+    st7735.o(.ARM.exidx.text.ST7735_FillRect) refers to st7735.o(.text.ST7735_FillRect) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_DrawSmallCircle) refers to st7735.o(.data._width) for _width
+    st7735.o(.text.ST7735_DrawSmallCircle) refers to st7735.o(.data._height) for _height
+    st7735.o(.text.ST7735_DrawSmallCircle) refers to st7735.o(.rodata.smallCircle) for smallCircle
+    st7735.o(.text.ST7735_DrawSmallCircle) refers to st7735.o(.text.setAddrWindow) for setAddrWindow
+    st7735.o(.text.ST7735_DrawSmallCircle) refers to st7735.o(.text.writedata) for writedata
+    st7735.o(.text.ST7735_DrawSmallCircle) refers to st7735.o(.text.deselect) for deselect
+    st7735.o(.ARM.exidx.text.ST7735_DrawSmallCircle) refers to st7735.o(.text.ST7735_DrawSmallCircle) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_DrawCircle) refers to st7735.o(.data._width) for _width
+    st7735.o(.text.ST7735_DrawCircle) refers to st7735.o(.data._height) for _height
+    st7735.o(.text.ST7735_DrawCircle) refers to st7735.o(.rodata.circle) for circle
+    st7735.o(.text.ST7735_DrawCircle) refers to st7735.o(.text.setAddrWindow) for setAddrWindow
+    st7735.o(.text.ST7735_DrawCircle) refers to st7735.o(.text.writedata) for writedata
+    st7735.o(.text.ST7735_DrawCircle) refers to st7735.o(.text.deselect) for deselect
+    st7735.o(.ARM.exidx.text.ST7735_DrawCircle) refers to st7735.o(.text.ST7735_DrawCircle) for [Anonymous Symbol]
+    st7735.o(.ARM.exidx.text.ST7735_Color565) refers to st7735.o(.text.ST7735_Color565) for [Anonymous Symbol]
+    st7735.o(.ARM.exidx.text.ST7735_SwapColor) refers to st7735.o(.text.ST7735_SwapColor) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_DrawBitmap) refers to st7735.o(.data._width) for _width
+    st7735.o(.text.ST7735_DrawBitmap) refers to st7735.o(.data._height) for _height
+    st7735.o(.text.ST7735_DrawBitmap) refers to st7735.o(.text.setAddrWindow) for setAddrWindow
+    st7735.o(.text.ST7735_DrawBitmap) refers to st7735.o(.text.writedata) for writedata
+    st7735.o(.text.ST7735_DrawBitmap) refers to st7735.o(.text.deselect) for deselect
+    st7735.o(.ARM.exidx.text.ST7735_DrawBitmap) refers to st7735.o(.text.ST7735_DrawBitmap) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_DrawCharS) refers to st7735.o(.data._width) for _width
+    st7735.o(.text.ST7735_DrawCharS) refers to st7735.o(.data._height) for _height
+    st7735.o(.text.ST7735_DrawCharS) refers to st7735.o(.rodata.Font) for Font
+    st7735.o(.text.ST7735_DrawCharS) refers to st7735.o(.text.ST7735_DrawPixel) for ST7735_DrawPixel
+    st7735.o(.text.ST7735_DrawCharS) refers to st7735.o(.text.ST7735_FillRect) for ST7735_FillRect
+    st7735.o(.ARM.exidx.text.ST7735_DrawCharS) refers to st7735.o(.text.ST7735_DrawCharS) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_DrawChar) refers to st7735.o(.data._width) for _width
+    st7735.o(.text.ST7735_DrawChar) refers to st7735.o(.data._height) for _height
+    st7735.o(.text.ST7735_DrawChar) refers to st7735.o(.text.setAddrWindow) for setAddrWindow
+    st7735.o(.text.ST7735_DrawChar) refers to st7735.o(.rodata.Font) for Font
+    st7735.o(.text.ST7735_DrawChar) refers to st7735.o(.text.pushColor) for pushColor
+    st7735.o(.text.ST7735_DrawChar) refers to st7735.o(.text.deselect) for deselect
+    st7735.o(.ARM.exidx.text.ST7735_DrawChar) refers to st7735.o(.text.ST7735_DrawChar) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_DrawString) refers to st7735.o(.text.ST7735_DrawCharS) for ST7735_DrawCharS
+    st7735.o(.ARM.exidx.text.ST7735_DrawString) refers to st7735.o(.text.ST7735_DrawString) for [Anonymous Symbol]
+    st7735.o(.text.fillmessage) refers to st7735.o(.bss.Messageindex) for Messageindex
+    st7735.o(.text.fillmessage) refers to st7735.o(.bss.Message) for Message
+    st7735.o(.ARM.exidx.text.fillmessage) refers to st7735.o(.text.fillmessage) for [Anonymous Symbol]
+    st7735.o(.text.fillmessage4) refers to st7735.o(.bss.Messageindex) for Messageindex
+    st7735.o(.text.fillmessage4) refers to st7735.o(.bss.Message) for Message
+    st7735.o(.text.fillmessage4) refers to st7735.o(.text.fillmessage) for fillmessage
+    st7735.o(.ARM.exidx.text.fillmessage4) refers to st7735.o(.text.fillmessage4) for [Anonymous Symbol]
+    st7735.o(.text.fillmessage5) refers to st7735.o(.bss.Messageindex) for Messageindex
+    st7735.o(.text.fillmessage5) refers to st7735.o(.bss.Message) for Message
+    st7735.o(.text.fillmessage5) refers to st7735.o(.text.fillmessage) for fillmessage
+    st7735.o(.ARM.exidx.text.fillmessage5) refers to st7735.o(.text.fillmessage5) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_OutUDec) refers to st7735.o(.bss.Messageindex) for Messageindex
+    st7735.o(.text.ST7735_OutUDec) refers to st7735.o(.text.fillmessage) for fillmessage
+    st7735.o(.text.ST7735_OutUDec) refers to st7735.o(.bss.Message) for Message
+    st7735.o(.text.ST7735_OutUDec) refers to st7735.o(.bss.StX) for StX
+    st7735.o(.text.ST7735_OutUDec) refers to st7735.o(.bss.StY) for StY
+    st7735.o(.text.ST7735_OutUDec) refers to st7735.o(.data.StTextColor) for StTextColor
+    st7735.o(.text.ST7735_OutUDec) refers to st7735.o(.text.ST7735_DrawString) for ST7735_DrawString
+    st7735.o(.text.ST7735_OutUDec) refers to st7735.o(.text.ST7735_DrawCharS) for ST7735_DrawCharS
+    st7735.o(.ARM.exidx.text.ST7735_OutUDec) refers to st7735.o(.text.ST7735_OutUDec) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_OutUDec4) refers to st7735.o(.bss.Messageindex) for Messageindex
+    st7735.o(.text.ST7735_OutUDec4) refers to st7735.o(.text.fillmessage4) for fillmessage4
+    st7735.o(.text.ST7735_OutUDec4) refers to st7735.o(.bss.Message) for Message
+    st7735.o(.text.ST7735_OutUDec4) refers to st7735.o(.bss.StX) for StX
+    st7735.o(.text.ST7735_OutUDec4) refers to st7735.o(.bss.StY) for StY
+    st7735.o(.text.ST7735_OutUDec4) refers to st7735.o(.data.StTextColor) for StTextColor
+    st7735.o(.text.ST7735_OutUDec4) refers to st7735.o(.text.ST7735_DrawString) for ST7735_DrawString
+    st7735.o(.text.ST7735_OutUDec4) refers to st7735.o(.text.ST7735_DrawCharS) for ST7735_DrawCharS
+    st7735.o(.ARM.exidx.text.ST7735_OutUDec4) refers to st7735.o(.text.ST7735_OutUDec4) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_OutUDec5) refers to st7735.o(.bss.Messageindex) for Messageindex
+    st7735.o(.text.ST7735_OutUDec5) refers to st7735.o(.text.fillmessage5) for fillmessage5
+    st7735.o(.text.ST7735_OutUDec5) refers to st7735.o(.bss.Message) for Message
+    st7735.o(.text.ST7735_OutUDec5) refers to st7735.o(.bss.StX) for StX
+    st7735.o(.text.ST7735_OutUDec5) refers to st7735.o(.bss.StY) for StY
+    st7735.o(.text.ST7735_OutUDec5) refers to st7735.o(.data.StTextColor) for StTextColor
+    st7735.o(.text.ST7735_OutUDec5) refers to st7735.o(.text.ST7735_DrawString) for ST7735_DrawString
+    st7735.o(.text.ST7735_OutUDec5) refers to st7735.o(.text.ST7735_DrawCharS) for ST7735_DrawCharS
+    st7735.o(.ARM.exidx.text.ST7735_OutUDec5) refers to st7735.o(.text.ST7735_OutUDec5) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_SetRotation) refers to st7735.o(.text.writecommand) for writecommand
+    st7735.o(.text.ST7735_SetRotation) refers to st7735.o(.bss.Rotation) for Rotation
+    st7735.o(.text.ST7735_SetRotation) refers to st7735.o(.bss.TabColor) for TabColor
+    st7735.o(.text.ST7735_SetRotation) refers to st7735.o(.text.writedata) for writedata
+    st7735.o(.text.ST7735_SetRotation) refers to st7735.o(.data._width) for _width
+    st7735.o(.text.ST7735_SetRotation) refers to st7735.o(.data._height) for _height
+    st7735.o(.text.ST7735_SetRotation) refers to st7735.o(.text.deselect) for deselect
+    st7735.o(.ARM.exidx.text.ST7735_SetRotation) refers to st7735.o(.text.ST7735_SetRotation) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_InvertDisplay) refers to st7735.o(.text.writecommand) for writecommand
+    st7735.o(.text.ST7735_InvertDisplay) refers to st7735.o(.text.deselect) for deselect
+    st7735.o(.ARM.exidx.text.ST7735_InvertDisplay) refers to st7735.o(.text.ST7735_InvertDisplay) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_PlotClear) refers to st7735.o(.text.ST7735_Color565) for ST7735_Color565
+    st7735.o(.text.ST7735_PlotClear) refers to st7735.o(.text.ST7735_FillRect) for ST7735_FillRect
+    st7735.o(.text.ST7735_PlotClear) refers to st7735.o(.bss.Ymax) for Ymax
+    st7735.o(.text.ST7735_PlotClear) refers to st7735.o(.bss.Ymin) for Ymin
+    st7735.o(.text.ST7735_PlotClear) refers to st7735.o(.bss.Yrange) for Yrange
+    st7735.o(.text.ST7735_PlotClear) refers to st7735.o(.bss.X) for X
+    st7735.o(.ARM.exidx.text.ST7735_PlotClear) refers to st7735.o(.text.ST7735_PlotClear) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_PlotPoint) refers to st7735.o(.bss.Ymin) for Ymin
+    st7735.o(.text.ST7735_PlotPoint) refers to st7735.o(.bss.Ymax) for Ymax
+    st7735.o(.text.ST7735_PlotPoint) refers to st7735.o(.bss.Yrange) for Yrange
+    st7735.o(.text.ST7735_PlotPoint) refers to st7735.o(.bss.X) for X
+    st7735.o(.text.ST7735_PlotPoint) refers to st7735.o(.text.ST7735_DrawPixel) for ST7735_DrawPixel
+    st7735.o(.ARM.exidx.text.ST7735_PlotPoint) refers to st7735.o(.text.ST7735_PlotPoint) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_PlotLine) refers to st7735.o(.bss.Ymin) for Ymin
+    st7735.o(.text.ST7735_PlotLine) refers to st7735.o(.bss.Ymax) for Ymax
+    st7735.o(.text.ST7735_PlotLine) refers to st7735.o(.bss.Yrange) for Yrange
+    st7735.o(.text.ST7735_PlotLine) refers to st7735.o(.bss.lastj) for lastj
+    st7735.o(.text.ST7735_PlotLine) refers to st7735.o(.bss.X) for X
+    st7735.o(.text.ST7735_PlotLine) refers to st7735.o(.text.ST7735_DrawPixel) for ST7735_DrawPixel
+    st7735.o(.ARM.exidx.text.ST7735_PlotLine) refers to st7735.o(.text.ST7735_PlotLine) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_PlotPoints) refers to st7735.o(.bss.Ymin) for Ymin
+    st7735.o(.text.ST7735_PlotPoints) refers to st7735.o(.bss.Ymax) for Ymax
+    st7735.o(.text.ST7735_PlotPoints) refers to st7735.o(.bss.Yrange) for Yrange
+    st7735.o(.text.ST7735_PlotPoints) refers to st7735.o(.bss.X) for X
+    st7735.o(.text.ST7735_PlotPoints) refers to st7735.o(.text.ST7735_DrawPixel) for ST7735_DrawPixel
+    st7735.o(.ARM.exidx.text.ST7735_PlotPoints) refers to st7735.o(.text.ST7735_PlotPoints) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_PlotBar) refers to st7735.o(.bss.Ymin) for Ymin
+    st7735.o(.text.ST7735_PlotBar) refers to st7735.o(.bss.Ymax) for Ymax
+    st7735.o(.text.ST7735_PlotBar) refers to st7735.o(.bss.Yrange) for Yrange
+    st7735.o(.text.ST7735_PlotBar) refers to st7735.o(.bss.X) for X
+    st7735.o(.text.ST7735_PlotBar) refers to st7735.o(.text.ST7735_DrawFastVLine) for ST7735_DrawFastVLine
+    st7735.o(.ARM.exidx.text.ST7735_PlotBar) refers to st7735.o(.text.ST7735_PlotBar) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_PlotdBfs) refers to st7735.o(.rodata.dBfs) for dBfs
+    st7735.o(.text.ST7735_PlotdBfs) refers to st7735.o(.bss.X) for X
+    st7735.o(.text.ST7735_PlotdBfs) refers to st7735.o(.text.ST7735_DrawFastVLine) for ST7735_DrawFastVLine
+    st7735.o(.ARM.exidx.text.ST7735_PlotdBfs) refers to st7735.o(.text.ST7735_PlotdBfs) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_PlotNext) refers to st7735.o(.bss.X) for X
+    st7735.o(.ARM.exidx.text.ST7735_PlotNext) refers to st7735.o(.text.ST7735_PlotNext) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_PlotNextErase) refers to st7735.o(.bss.X) for X
+    st7735.o(.text.ST7735_PlotNextErase) refers to st7735.o(.text.ST7735_Color565) for ST7735_Color565
+    st7735.o(.text.ST7735_PlotNextErase) refers to st7735.o(.text.ST7735_DrawFastVLine) for ST7735_DrawFastVLine
+    st7735.o(.ARM.exidx.text.ST7735_PlotNextErase) refers to st7735.o(.text.ST7735_PlotNextErase) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_OutChar) refers to st7735.o(.bss.StY) for StY
+    st7735.o(.text.ST7735_OutChar) refers to st7735.o(.bss.StX) for StX
+    st7735.o(.text.ST7735_OutChar) refers to st7735.o(.data.StTextColor) for StTextColor
+    st7735.o(.text.ST7735_OutChar) refers to st7735.o(.rodata.str1.1) for .L.str
+    st7735.o(.text.ST7735_OutChar) refers to st7735.o(.text.ST7735_DrawString) for ST7735_DrawString
+    st7735.o(.text.ST7735_OutChar) refers to st7735.o(.text.ST7735_DrawCharS) for ST7735_DrawCharS
+    st7735.o(.ARM.exidx.text.ST7735_OutChar) refers to st7735.o(.text.ST7735_OutChar) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_OutString) refers to st7735.o(.text.ST7735_OutChar) for ST7735_OutChar
+    st7735.o(.ARM.exidx.text.ST7735_OutString) refers to st7735.o(.text.ST7735_OutString) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_SetTextColor) refers to st7735.o(.data.StTextColor) for StTextColor
+    st7735.o(.ARM.exidx.text.ST7735_SetTextColor) refers to st7735.o(.text.ST7735_SetTextColor) for [Anonymous Symbol]
+    st7735.o(.text.fputc) refers to st7735.o(.text.ST7735_OutChar) for ST7735_OutChar
+    st7735.o(.ARM.exidx.text.fputc) refers to st7735.o(.text.fputc) for [Anonymous Symbol]
+    st7735.o(.ARM.exidx.text.fgetc) refers to st7735.o(.text.fgetc) for [Anonymous Symbol]
+    st7735.o(.ARM.exidx.text.ferror) refers to st7735.o(.text.ferror) for [Anonymous Symbol]
+    st7735.o(.text.Output_Init) refers to st7735.o(.text.ST7735_InitR) for ST7735_InitR
+    st7735.o(.text.Output_Init) refers to st7735.o(.text.ST7735_FillScreen) for ST7735_FillScreen
+    st7735.o(.ARM.exidx.text.Output_Init) refers to st7735.o(.text.Output_Init) for [Anonymous Symbol]
+    st7735.o(.text.Output_Clear) refers to st7735.o(.text.ST7735_FillScreen) for ST7735_FillScreen
+    st7735.o(.ARM.exidx.text.Output_Clear) refers to st7735.o(.text.Output_Clear) for [Anonymous Symbol]
+    st7735.o(.text.Output_Off) refers to st7735.o(.text.Output_Clear) for Output_Clear
+    st7735.o(.ARM.exidx.text.Output_Off) refers to st7735.o(.text.Output_Off) for [Anonymous Symbol]
+    st7735.o(.text.Output_On) refers to st7735.o(.text.Output_Init) for Output_Init
+    st7735.o(.ARM.exidx.text.Output_On) refers to st7735.o(.text.Output_On) for [Anonymous Symbol]
+    st7735.o(.text.Output_Color) refers to st7735.o(.text.ST7735_SetTextColor) for ST7735_SetTextColor
+    st7735.o(.ARM.exidx.text.Output_Color) refers to st7735.o(.text.Output_Color) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_sDecOut2) refers to st7735.o(.rodata.str1.1) for .L.str.1
+    st7735.o(.text.ST7735_sDecOut2) refers to st7735.o(.text.ST7735_OutString) for ST7735_OutString
+    st7735.o(.text.ST7735_sDecOut2) refers to st7735.o(.text.ST7735_OutUDec) for ST7735_OutUDec
+    st7735.o(.ARM.exidx.text.ST7735_sDecOut2) refers to st7735.o(.text.ST7735_sDecOut2) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_uBinOut6) refers to st7735.o(.rodata.str1.1) for .L.str.11
+    st7735.o(.text.ST7735_uBinOut6) refers to st7735.o(.text.ST7735_OutString) for ST7735_OutString
+    st7735.o(.text.ST7735_uBinOut6) refers to st7735.o(.text.ST7735_OutUDec) for ST7735_OutUDec
+    st7735.o(.ARM.exidx.text.ST7735_uBinOut6) refers to st7735.o(.text.ST7735_uBinOut6) for [Anonymous Symbol]
+    st7735.o(.text.plotLineX) refers to siabs.o(.text) for abs
+    st7735.o(.text.plotLineX) refers to st7735.o(.text.ST7735_DrawPixel) for ST7735_DrawPixel
+    st7735.o(.ARM.exidx.text.plotLineX) refers to st7735.o(.text.plotLineX) for [Anonymous Symbol]
+    st7735.o(.text.plotLineY) refers to siabs.o(.text) for abs
+    st7735.o(.text.plotLineY) refers to st7735.o(.text.ST7735_DrawPixel) for ST7735_DrawPixel
+    st7735.o(.ARM.exidx.text.plotLineY) refers to st7735.o(.text.plotLineY) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_Line) refers to siabs.o(.text) for abs
+    st7735.o(.text.ST7735_Line) refers to st7735.o(.text.plotLineX) for plotLineX
+    st7735.o(.text.ST7735_Line) refers to st7735.o(.text.plotLineY) for plotLineY
+    st7735.o(.ARM.exidx.text.ST7735_Line) refers to st7735.o(.text.ST7735_Line) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_SetX) refers to st7735.o(.bss.X) for X
+    st7735.o(.ARM.exidx.text.ST7735_SetX) refers to st7735.o(.text.ST7735_SetX) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_XYplotInit) refers to st7735.o(.text.Output_Clear) for Output_Clear
+    st7735.o(.text.ST7735_XYplotInit) refers to st7735.o(.text.ST7735_SetCursor) for ST7735_SetCursor
+    st7735.o(.text.ST7735_XYplotInit) refers to st7735.o(.bss.low_x) for low_x
+    st7735.o(.text.ST7735_XYplotInit) refers to st7735.o(.bss.high_x) for high_x
+    st7735.o(.text.ST7735_XYplotInit) refers to st7735.o(.bss.low_y) for low_y
+    st7735.o(.text.ST7735_XYplotInit) refers to st7735.o(.bss.high_y) for high_y
+    st7735.o(.ARM.exidx.text.ST7735_XYplotInit) refers to st7735.o(.text.ST7735_XYplotInit) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_XYplot) refers to st7735.o(.bss.high_x) for high_x
+    st7735.o(.text.ST7735_XYplot) refers to st7735.o(.bss.low_x) for low_x
+    st7735.o(.text.ST7735_XYplot) refers to st7735.o(.bss.high_y) for high_y
+    st7735.o(.text.ST7735_XYplot) refers to st7735.o(.bss.low_y) for low_y
+    st7735.o(.text.ST7735_XYplot) refers to st7735.o(.text.ST7735_Color565) for ST7735_Color565
+    st7735.o(.text.ST7735_XYplot) refers to st7735.o(.text.ST7735_DrawPixel) for ST7735_DrawPixel
+    st7735.o(.ARM.exidx.text.ST7735_XYplot) refers to st7735.o(.text.ST7735_XYplot) for [Anonymous Symbol]
+    st7735.o(.ARM.exidx.text.get_exponential) refers to st7735.o(.text.get_exponential) for [Anonymous Symbol]
+    st7735.o(.text.Extract_signed) refers to st7735.o(.text.get_exponential) for get_exponential
+    st7735.o(.ARM.exidx.text.Extract_signed) refers to st7735.o(.text.Extract_signed) for [Anonymous Symbol]
+    st7735.o(.text.Extract_unsigned) refers to st7735.o(.text.get_exponential) for get_exponential
+    st7735.o(.ARM.exidx.text.Extract_unsigned) refers to st7735.o(.text.Extract_unsigned) for [Anonymous Symbol]
+    st7735.o(.ARM.exidx.text.IntegerToChar) refers to st7735.o(.text.IntegerToChar) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_sDecOut3) refers to st7735.o(.rodata.str1.1) for .L.str.14
+    st7735.o(.text.ST7735_sDecOut3) refers to st7735.o(.text.ST7735_OutString) for ST7735_OutString
+    st7735.o(.text.ST7735_sDecOut3) refers to malloc.o(i.malloc) for malloc
+    st7735.o(.text.ST7735_sDecOut3) refers to st7735.o(.text.Extract_signed) for Extract_signed
+    st7735.o(.text.ST7735_sDecOut3) refers to st7735.o(.text.IntegerToChar) for IntegerToChar
+    st7735.o(.ARM.exidx.text.ST7735_sDecOut3) refers to st7735.o(.text.ST7735_sDecOut3) for [Anonymous Symbol]
+    st7735.o(.text.ST7735_uBinOut5) refers to st7735.o(.rodata.str1.1) for .L.str.16
+    st7735.o(.text.ST7735_uBinOut5) refers to st7735.o(.text.ST7735_OutString) for ST7735_OutString
+    st7735.o(.text.ST7735_uBinOut5) refers to malloc.o(i.malloc) for malloc
+    st7735.o(.text.ST7735_uBinOut5) refers to st7735.o(.text.Extract_unsigned) for Extract_unsigned
+    st7735.o(.text.ST7735_uBinOut5) refers to st7735.o(.text.IntegerToChar) for IntegerToChar
+    st7735.o(.ARM.exidx.text.ST7735_uBinOut5) refers to st7735.o(.text.ST7735_uBinOut5) for [Anonymous Symbol]
+    dac.o(.ARM.exidx.text.DAC_Init) refers to dac.o(.text.DAC_Init) for [Anonymous Symbol]
+    dac.o(.ARM.exidx.text.DAC_Out) refers to dac.o(.text.DAC_Out) for [Anonymous Symbol]
+    music.o(.text.metronomeHit) refers to music.o(.bss.MetronomeStage) for MetronomeStage
+    music.o(.text.metronomeHit) refers to timer1a.o(.text.Timer1A_ChangePeriod) for Timer1A_ChangePeriod
+    music.o(.text.metronomeHit) refers to music.o(.bss.Metronome) for Metronome
+    music.o(.ARM.exidx.text.metronomeHit) refers to music.o(.text.metronomeHit) for [Anonymous Symbol]
+    music.o(.text.SetMetronome) refers to music.o(.bss.Metronome) for Metronome
+    music.o(.text.SetMetronome) refers to timer1a.o(.text.Timer1A_Stop) for Timer1A_Stop
+    music.o(.text.SetMetronome) refers to music.o(.bss.MetronomeStage) for MetronomeStage
+    music.o(.text.SetMetronome) refers to music.o(.text.metronomeHit) for metronomeHit
+    music.o(.text.SetMetronome) refers to timer1a.o(.text.Timer1A_Init) for Timer1A_Init
+    music.o(.ARM.exidx.text.SetMetronome) refers to music.o(.text.SetMetronome) for [Anonymous Symbol]
+    music.o(.text.SetVolume) refers to music.o(.data.VOL) for VOL
+    music.o(.ARM.exidx.text.SetVolume) refers to music.o(.text.SetVolume) for [Anonymous Symbol]
+    music.o(.text.play1Note) refers to music.o(.bss.singleI) for singleI
+    music.o(.text.play1Note) refers to music.o(.bss.INUM) for INUM
+    music.o(.text.play1Note) refers to music.o(.rodata.Instruments) for Instruments
+    music.o(.text.play1Note) refers to music.o(.bss.moment1) for moment1
+    music.o(.text.play1Note) refers to music.o(.bss.moment2) for moment2
+    music.o(.text.play1Note) refers to music.o(.bss.MetronomeStage) for MetronomeStage
+    music.o(.text.play1Note) refers to music.o(.rodata.Click64) for Click64
+    music.o(.text.play1Note) refers to music.o(.data.VOL) for VOL
+    music.o(.text.play1Note) refers to music.o(.bss.out1) for out1
+    music.o(.text.play1Note) refers to music.o(.bss.out2) for out2
+    music.o(.text.play1Note) refers to dac.o(.text.DAC_Out) for DAC_Out
+    music.o(.ARM.exidx.text.play1Note) refers to music.o(.text.play1Note) for [Anonymous Symbol]
+    music.o(.text.Play1Note) refers to music.o(.bss.playing) for playing
+    music.o(.text.Play1Note) refers to timer0a.o(.text.Timer0A_Stop) for Timer0A_Stop
+    music.o(.text.Play1Note) refers to music.o(.bss.BASE) for BASE
+    music.o(.text.Play1Note) refers to music.o(.rodata.PERIODS) for PERIODS
+    music.o(.text.Play1Note) refers to music.o(.data.FIRST) for FIRST
+    music.o(.text.Play1Note) refers to music.o(.bss.PERIOD) for PERIOD
+    music.o(.text.Play1Note) refers to music.o(.text.play1Note) for play1Note
+    music.o(.text.Play1Note) refers to timer0a.o(.text.Timer0A_Init) for Timer0A_Init
+    music.o(.ARM.exidx.text.Play1Note) refers to music.o(.text.Play1Note) for [Anonymous Symbol]
+    music.o(.text.twoNotes) refers to music.o(.bss.T) for T
+    music.o(.text.twoNotes) refers to music.o(.bss.PERIOD) for PERIOD
+    music.o(.text.twoNotes) refers to music.o(.data.FIRST) for FIRST
+    music.o(.text.twoNotes) refers to music.o(.bss.SECOND) for SECOND
+    music.o(.text.twoNotes) refers to music.o(.bss.INUM) for INUM
+    music.o(.text.twoNotes) refers to music.o(.rodata.Instruments) for Instruments
+    music.o(.text.twoNotes) refers to music.o(.bss.MetronomeStage) for MetronomeStage
+    music.o(.text.twoNotes) refers to music.o(.rodata.Click64) for Click64
+    music.o(.text.twoNotes) refers to music.o(.data.VOL) for VOL
+    music.o(.text.twoNotes) refers to music.o(.bss.out1) for out1
+    music.o(.text.twoNotes) refers to music.o(.bss.out2) for out2
+    music.o(.text.twoNotes) refers to dac.o(.text.DAC_Out) for DAC_Out
+    music.o(.ARM.exidx.text.twoNotes) refers to music.o(.text.twoNotes) for [Anonymous Symbol]
+    music.o(.text.Play2Notes) refers to music.o(.bss.playing) for playing
+    music.o(.text.Play2Notes) refers to timer0a.o(.text.Timer0A_Stop) for Timer0A_Stop
+    music.o(.text.Play2Notes) refers to music.o(.bss.T) for T
+    music.o(.text.Play2Notes) refers to music.o(.rodata.PERIODS) for PERIODS
+    music.o(.text.Play2Notes) refers to music.o(.bss.PERIOD) for PERIOD
+    music.o(.text.Play2Notes) refers to music.o(.data.FIRST) for FIRST
+    music.o(.text.Play2Notes) refers to music.o(.bss.SECOND) for SECOND
+    music.o(.text.Play2Notes) refers to music.o(.text.twoNotes) for twoNotes
+    music.o(.text.Play2Notes) refers to timer0a.o(.text.Timer0A_Init) for Timer0A_Init
+    music.o(.ARM.exidx.text.Play2Notes) refers to music.o(.text.Play2Notes) for [Anonymous Symbol]
+    music.o(.text.threeNotes) refers to music.o(.bss.T) for T
+    music.o(.text.threeNotes) refers to music.o(.bss.PERIOD) for PERIOD
+    music.o(.text.threeNotes) refers to music.o(.data.FIRST) for FIRST
+    music.o(.text.threeNotes) refers to music.o(.bss.SECOND) for SECOND
+    music.o(.text.threeNotes) refers to music.o(.bss.THIRD) for THIRD
+    music.o(.text.threeNotes) refers to music.o(.bss.INUM) for INUM
+    music.o(.text.threeNotes) refers to music.o(.rodata.Instruments) for Instruments
+    music.o(.text.threeNotes) refers to music.o(.bss.MetronomeStage) for MetronomeStage
+    music.o(.text.threeNotes) refers to music.o(.rodata.Click64) for Click64
+    music.o(.text.threeNotes) refers to music.o(.data.VOL) for VOL
+    music.o(.text.threeNotes) refers to music.o(.bss.out1) for out1
+    music.o(.text.threeNotes) refers to music.o(.bss.out2) for out2
+    music.o(.text.threeNotes) refers to dac.o(.text.DAC_Out) for DAC_Out
+    music.o(.ARM.exidx.text.threeNotes) refers to music.o(.text.threeNotes) for [Anonymous Symbol]
+    music.o(.text.Play3Notes) refers to music.o(.bss.playing) for playing
+    music.o(.text.Play3Notes) refers to timer0a.o(.text.Timer0A_Stop) for Timer0A_Stop
+    music.o(.text.Play3Notes) refers to music.o(.bss.T) for T
+    music.o(.text.Play3Notes) refers to music.o(.rodata.PERIODS) for PERIODS
+    music.o(.text.Play3Notes) refers to music.o(.bss.PERIOD) for PERIOD
+    music.o(.text.Play3Notes) refers to music.o(.data.FIRST) for FIRST
+    music.o(.text.Play3Notes) refers to music.o(.bss.SECOND) for SECOND
+    music.o(.text.Play3Notes) refers to music.o(.bss.THIRD) for THIRD
+    music.o(.text.Play3Notes) refers to music.o(.text.threeNotes) for threeNotes
+    music.o(.text.Play3Notes) refers to timer0a.o(.text.Timer0A_Init) for Timer0A_Init
+    music.o(.ARM.exidx.text.Play3Notes) refers to music.o(.text.Play3Notes) for [Anonymous Symbol]
+    music.o(.text.fourNotes) refers to music.o(.bss.T) for T
+    music.o(.text.fourNotes) refers to music.o(.bss.PERIOD) for PERIOD
+    music.o(.text.fourNotes) refers to music.o(.data.FIRST) for FIRST
+    music.o(.text.fourNotes) refers to music.o(.bss.SECOND) for SECOND
+    music.o(.text.fourNotes) refers to music.o(.bss.THIRD) for THIRD
+    music.o(.text.fourNotes) refers to music.o(.bss.FOURTH) for FOURTH
+    music.o(.text.fourNotes) refers to music.o(.bss.INUM) for INUM
+    music.o(.text.fourNotes) refers to music.o(.rodata.Instruments) for Instruments
+    music.o(.text.fourNotes) refers to music.o(.bss.MetronomeStage) for MetronomeStage
+    music.o(.text.fourNotes) refers to music.o(.rodata.Click64) for Click64
+    music.o(.text.fourNotes) refers to music.o(.data.VOL) for VOL
+    music.o(.text.fourNotes) refers to music.o(.bss.out1) for out1
+    music.o(.text.fourNotes) refers to music.o(.bss.out2) for out2
+    music.o(.text.fourNotes) refers to dac.o(.text.DAC_Out) for DAC_Out
+    music.o(.ARM.exidx.text.fourNotes) refers to music.o(.text.fourNotes) for [Anonymous Symbol]
+    music.o(.text.Play4Notes) refers to music.o(.bss.playing) for playing
+    music.o(.text.Play4Notes) refers to timer0a.o(.text.Timer0A_Stop) for Timer0A_Stop
+    music.o(.text.Play4Notes) refers to music.o(.bss.T) for T
+    music.o(.text.Play4Notes) refers to music.o(.rodata.PERIODS) for PERIODS
+    music.o(.text.Play4Notes) refers to music.o(.bss.PERIOD) for PERIOD
+    music.o(.text.Play4Notes) refers to music.o(.data.FIRST) for FIRST
+    music.o(.text.Play4Notes) refers to music.o(.bss.SECOND) for SECOND
+    music.o(.text.Play4Notes) refers to music.o(.bss.THIRD) for THIRD
+    music.o(.text.Play4Notes) refers to music.o(.bss.FOURTH) for FOURTH
+    music.o(.text.Play4Notes) refers to music.o(.text.fourNotes) for fourNotes
+    music.o(.text.Play4Notes) refers to timer0a.o(.text.Timer0A_Init) for Timer0A_Init
+    music.o(.ARM.exidx.text.Play4Notes) refers to music.o(.text.Play4Notes) for [Anonymous Symbol]
+    music.o(.text.PlayNotes) refers to music.o(.text.Play3Notes) for Play3Notes
+    music.o(.text.PlayNotes) refers to music.o(.rodata.CHORDS) for CHORDS
+    music.o(.text.PlayNotes) refers to music.o(.text.Play1Note) for Play1Note
+    music.o(.text.PlayNotes) refers to music.o(.text.Play2Notes) for Play2Notes
+    music.o(.text.PlayNotes) refers to music.o(.text.Play4Notes) for Play4Notes
+    music.o(.ARM.exidx.text.PlayNotes) refers to music.o(.text.PlayNotes) for [Anonymous Symbol]
+    music.o(.text.playNoteSong) refers to music.o(.bss.T) for T
+    music.o(.text.playNoteSong) refers to music.o(.bss.PERIOD) for PERIOD
+    music.o(.text.playNoteSong) refers to music.o(.bss.NINDEX) for NINDEX
+    music.o(.text.playNoteSong) refers to music.o(.data.songNotes) for songNotes
+    music.o(.text.playNoteSong) refers to music.o(.bss.INUM) for INUM
+    music.o(.text.playNoteSong) refers to music.o(.rodata.Instruments) for Instruments
+    music.o(.text.playNoteSong) refers to music.o(.data.VOL) for VOL
+    music.o(.text.playNoteSong) refers to music.o(.bss.out1) for out1
+    music.o(.text.playNoteSong) refers to music.o(.bss.out2) for out2
+    music.o(.text.playNoteSong) refers to dac.o(.text.DAC_Out) for DAC_Out
+    music.o(.ARM.exidx.text.playNoteSong) refers to music.o(.text.playNoteSong) for [Anonymous Symbol]
+    music.o(.text.nextNoteSong) refers to timer1a.o(.text.Timer1A_Stop) for Timer1A_Stop
+    music.o(.text.nextNoteSong) refers to timer0a.o(.text.Timer0A_Stop) for Timer0A_Stop
+    music.o(.text.nextNoteSong) refers to music.o(.bss.COUNT) for COUNT
+    music.o(.text.nextNoteSong) refers to music.o(.bss.NINDEX) for NINDEX
+    music.o(.text.nextNoteSong) refers to music.o(.bss.T) for T
+    music.o(.text.nextNoteSong) refers to music.o(.data.songNotes) for songNotes
+    music.o(.text.nextNoteSong) refers to music.o(.bss.PERIOD) for PERIOD
+    music.o(.text.nextNoteSong) refers to music.o(.text.playNoteSong) for playNoteSong
+    music.o(.text.nextNoteSong) refers to timer0a.o(.text.Timer0A_Init) for Timer0A_Init
+    music.o(.text.nextNoteSong) refers to music.o(.data.songLength) for songLength
+    music.o(.text.nextNoteSong) refers to timer1a.o(.text.Timer1A_Init) for Timer1A_Init
+    music.o(.text.nextNoteSong) refers to dac.o(.text.DAC_Out) for DAC_Out
+    music.o(.ARM.exidx.text.nextNoteSong) refers to music.o(.text.nextNoteSong) for [Anonymous Symbol]
+    music.o(.text.PlaySongDemo) refers to music.o(.bss.T) for T
+    music.o(.text.PlaySongDemo) refers to music.o(.data.VOL) for VOL
+    music.o(.text.PlaySongDemo) refers to music.o(.bss.NINDEX) for NINDEX
+    music.o(.text.PlaySongDemo) refers to music.o(.data.songNotes) for songNotes
+    music.o(.text.PlaySongDemo) refers to music.o(.bss.PERIOD) for PERIOD
+    music.o(.text.PlaySongDemo) refers to music.o(.bss.INUM) for INUM
+    music.o(.text.PlaySongDemo) refers to music.o(.text.playNoteSong) for playNoteSong
+    music.o(.text.PlaySongDemo) refers to timer0a.o(.text.Timer0A_Init) for Timer0A_Init
+    music.o(.text.PlaySongDemo) refers to music.o(.data.songLength) for songLength
+    music.o(.text.PlaySongDemo) refers to music.o(.text.nextNoteSong) for nextNoteSong
+    music.o(.text.PlaySongDemo) refers to timer1a.o(.text.Timer1A_Init) for Timer1A_Init
+    music.o(.ARM.exidx.text.PlaySongDemo) refers to music.o(.text.PlaySongDemo) for [Anonymous Symbol]
+    music.o(.text.nextNoteFF) refers to timer1a.o(.text.Timer1A_Stop) for Timer1A_Stop
+    music.o(.text.nextNoteFF) refers to music.o(.bss.T) for T
+    music.o(.text.nextNoteFF) refers to music.o(.bss.NINDEX) for NINDEX
+    music.o(.text.nextNoteFF) refers to music.o(.data.FairyFountainNotes) for FairyFountainNotes
+    music.o(.text.nextNoteFF) refers to music.o(.data.FIRST) for FIRST
+    music.o(.text.nextNoteFF) refers to music.o(.bss.SECOND) for SECOND
+    music.o(.text.nextNoteFF) refers to music.o(.bss.THIRD) for THIRD
+    music.o(.text.nextNoteFF) refers to music.o(.bss.FOURTH) for FOURTH
+    music.o(.text.nextNoteFF) refers to music.o(.text.Play1Note) for Play1Note
+    music.o(.text.nextNoteFF) refers to music.o(.text.Play2Notes) for Play2Notes
+    music.o(.text.nextNoteFF) refers to music.o(.text.Play3Notes) for Play3Notes
+    music.o(.text.nextNoteFF) refers to music.o(.text.Play4Notes) for Play4Notes
+    music.o(.text.nextNoteFF) refers to music.o(.data.FairyFountainLength) for FairyFountainLength
+    music.o(.text.nextNoteFF) refers to timer1a.o(.text.Timer1A_Init) for Timer1A_Init
+    music.o(.text.nextNoteFF) refers to dac.o(.text.DAC_Out) for DAC_Out
+    music.o(.text.nextNoteFF) refers to timer0a.o(.text.Timer0A_Stop) for Timer0A_Stop
+    music.o(.text.nextNoteFF) refers to music.o(.bss.playing) for playing
+    music.o(.ARM.exidx.text.nextNoteFF) refers to music.o(.text.nextNoteFF) for [Anonymous Symbol]
+    music.o(.text.PlayFairyFountain) refers to dac.o(.text.DAC_Init) for DAC_Init
+    music.o(.text.PlayFairyFountain) refers to music.o(.bss.T) for T
+    music.o(.text.PlayFairyFountain) refers to music.o(.data.VOL) for VOL
+    music.o(.text.PlayFairyFountain) refers to music.o(.bss.NINDEX) for NINDEX
+    music.o(.text.PlayFairyFountain) refers to music.o(.data.FairyFountainNotes) for FairyFountainNotes
+    music.o(.text.PlayFairyFountain) refers to music.o(.bss.PERIOD) for PERIOD
+    music.o(.text.PlayFairyFountain) refers to music.o(.bss.INUM) for INUM
+    music.o(.text.PlayFairyFountain) refers to music.o(.text.nextNoteFF) for nextNoteFF
+    music.o(.text.PlayFairyFountain) refers to timer1a.o(.text.Timer1A_Init) for Timer1A_Init
+    music.o(.ARM.exidx.text.PlayFairyFountain) refers to music.o(.text.PlayFairyFountain) for [Anonymous Symbol]
+    music.o(.text.Timer0A_Function2) refers to music.o(.bss.T) for T
+    music.o(.text.Timer0A_Function2) refers to music.o(.bss.PERIOD) for PERIOD
+    music.o(.text.Timer0A_Function2) refers to music.o(.data.FIRST) for FIRST
+    music.o(.text.Timer0A_Function2) refers to music.o(.bss.SECOND) for SECOND
+    music.o(.text.Timer0A_Function2) refers to music.o(.bss.THIRD) for THIRD
+    music.o(.text.Timer0A_Function2) refers to music.o(.bss.INUM) for INUM
+    music.o(.text.Timer0A_Function2) refers to music.o(.rodata.Instruments) for Instruments
+    music.o(.text.Timer0A_Function2) refers to music.o(.bss.T2) for T2
+    music.o(.text.Timer0A_Function2) refers to music.o(.bss.FIRST2) for FIRST2
+    music.o(.text.Timer0A_Function2) refers to music.o(.bss.SECOND2) for SECOND2
+    music.o(.text.Timer0A_Function2) refers to music.o(.bss.THIRD2) for THIRD2
+    music.o(.text.Timer0A_Function2) refers to music.o(.bss.INUM2) for INUM2
+    music.o(.text.Timer0A_Function2) refers to music.o(.data.VOL) for VOL
+    music.o(.text.Timer0A_Function2) refers to dac.o(.text.DAC_Out) for DAC_Out
+    music.o(.ARM.exidx.text.Timer0A_Function2) refers to music.o(.text.Timer0A_Function2) for [Anonymous Symbol]
+    music.o(.text.nextOne) refers to timer0a.o(.text.Timer0A_Stop) for Timer0A_Stop
+    music.o(.text.nextOne) refers to music.o(.bss.SECOND) for SECOND
+    music.o(.text.nextOne) refers to music.o(.bss.BASE) for BASE
+    music.o(.text.nextOne) refers to music.o(.rodata.PERIODS) for PERIODS
+    music.o(.text.nextOne) refers to music.o(.bss.PERIOD) for PERIOD
+    music.o(.text.nextOne) refers to music.o(.bss.THIRD) for THIRD
+    music.o(.text.nextOne) refers to music.o(.data.FIRST) for FIRST
+    music.o(.text.nextOne) refers to music.o(.bss.SECOND2) for SECOND2
+    music.o(.text.nextOne) refers to music.o(.bss.BASE2) for BASE2
+    music.o(.text.nextOne) refers to music.o(.bss.PERIOD2) for PERIOD2
+    music.o(.text.nextOne) refers to music.o(.bss.THIRD2) for THIRD2
+    music.o(.text.nextOne) refers to music.o(.bss.FIRST2) for FIRST2
+    music.o(.text.nextOne) refers to music.o(.text.Timer0A_Function2) for Timer0A_Function2
+    music.o(.text.nextOne) refers to timer0a.o(.text.Timer0A_Init) for Timer0A_Init
+    music.o(.ARM.exidx.text.nextOne) refers to music.o(.text.nextOne) for [Anonymous Symbol]
+    music.o(.text.PlayChordProgression) refers to startup.o(.text) for DisableInterrupts
+    music.o(.text.PlayChordProgression) refers to dac.o(.text.DAC_Init) for DAC_Init
+    music.o(.text.PlayChordProgression) refers to music.o(.bss.T) for T
+    music.o(.text.PlayChordProgression) refers to music.o(.data.VOL) for VOL
+    music.o(.text.PlayChordProgression) refers to music.o(.data.FIRST) for FIRST
+    music.o(.text.PlayChordProgression) refers to music.o(.bss.PERIOD) for PERIOD
+    music.o(.text.PlayChordProgression) refers to music.o(.text.Timer0A_Function2) for Timer0A_Function2
+    music.o(.text.PlayChordProgression) refers to timer0a.o(.text.Timer0A_Init) for Timer0A_Init
+    music.o(.text.PlayChordProgression) refers to music.o(.text.nextOne) for nextOne
+    music.o(.text.PlayChordProgression) refers to timer1a.o(.text.Timer1A_Init) for Timer1A_Init
+    music.o(.text.PlayChordProgression) refers to music.o(.bss.BASE) for BASE
+    music.o(.text.PlayChordProgression) refers to music.o(.rodata.PERIODS) for PERIODS
+    music.o(.text.PlayChordProgression) refers to music.o(.bss.SECOND) for SECOND
+    music.o(.text.PlayChordProgression) refers to music.o(.bss.THIRD) for THIRD
+    music.o(.text.PlayChordProgression) refers to music.o(.bss.BASE2) for BASE2
+    music.o(.text.PlayChordProgression) refers to music.o(.bss.FIRST2) for FIRST2
+    music.o(.text.PlayChordProgression) refers to music.o(.bss.SECOND2) for SECOND2
+    music.o(.text.PlayChordProgression) refers to music.o(.bss.THIRD2) for THIRD2
+    music.o(.ARM.exidx.text.PlayChordProgression) refers to music.o(.text.PlayChordProgression) for [Anonymous Symbol]
+    music.o(.text.stopChords) refers to timer0a.o(.text.Timer0A_Stop) for Timer0A_Stop
+    music.o(.text.stopChords) refers to timer1a.o(.text.Timer1A_Stop) for Timer1A_Stop
+    music.o(.ARM.exidx.text.stopChords) refers to music.o(.text.stopChords) for [Anonymous Symbol]
+    buttons.o(.text.Button_Init) refers to buttons.o(.bss.SW1) for SW1
+    buttons.o(.text.Button_Init) refers to buttons.o(.bss.SW2) for SW2
+    buttons.o(.text.Button_Init) refers to buttons.o(.bss.SW3) for SW3
+    buttons.o(.text.Button_Init) refers to buttons.o(.bss.switch_debouncing) for switch_debouncing
+    buttons.o(.text.Button_Init) refers to buttons.o(.bss.set) for set
+    buttons.o(.ARM.exidx.text.Button_Init) refers to buttons.o(.text.Button_Init) for [Anonymous Symbol]
+    buttons.o(.text.GPIOPortC_Handler) refers to buttons.o(.bss.switch_debouncing) for switch_debouncing
+    buttons.o(.text.GPIOPortC_Handler) refers to buttons.o(.bss.SW1) for SW1
+    buttons.o(.text.GPIOPortC_Handler) refers to buttons.o(.bss.SW2) for SW2
+    buttons.o(.text.GPIOPortC_Handler) refers to buttons.o(.bss.SW3) for SW3
+    buttons.o(.text.GPIOPortC_Handler) refers to buttons.o(.bss.set) for set
+    buttons.o(.text.GPIOPortC_Handler) refers to buttons.o(.text.switch_debouncer) for switch_debouncer
+    buttons.o(.text.GPIOPortC_Handler) refers to timer4a.o(.text.Timer4A_Init) for Timer4A_Init
+    buttons.o(.ARM.exidx.text.GPIOPortC_Handler) refers to buttons.o(.text.GPIOPortC_Handler) for [Anonymous Symbol]
+    buttons.o(.text.switch_debouncer) refers to timer4a.o(.text.Timer4A_Stop) for Timer4A_Stop
+    buttons.o(.text.switch_debouncer) refers to buttons.o(.bss.set) for set
+    buttons.o(.text.switch_debouncer) refers to buttons.o(.text.wait_for_fall) for wait_for_fall
+    buttons.o(.text.switch_debouncer) refers to timer4a.o(.text.Timer4A_Init) for Timer4A_Init
+    buttons.o(.text.switch_debouncer) refers to buttons.o(.bss.switch_debouncing) for switch_debouncing
+    buttons.o(.ARM.exidx.text.switch_debouncer) refers to buttons.o(.text.switch_debouncer) for [Anonymous Symbol]
+    buttons.o(.text.wait_for_fall) refers to buttons.o(.bss.switch_debouncing) for switch_debouncing
+    buttons.o(.text.wait_for_fall) refers to timer4a.o(.text.Timer4A_Stop) for Timer4A_Stop
+    buttons.o(.text.wait_for_fall) refers to buttons.o(.text.switch_debouncer) for switch_debouncer
+    buttons.o(.text.wait_for_fall) refers to timer4a.o(.text.Timer4A_Init) for Timer4A_Init
+    buttons.o(.text.wait_for_fall) refers to buttons.o(.bss.set) for set
+    buttons.o(.ARM.exidx.text.wait_for_fall) refers to buttons.o(.text.wait_for_fall) for [Anonymous Symbol]
+    buttons.o(.text.GetSW1) refers to buttons.o(.bss.SW1) for SW1
+    buttons.o(.ARM.exidx.text.GetSW1) refers to buttons.o(.text.GetSW1) for [Anonymous Symbol]
+    buttons.o(.text.GetSW2) refers to buttons.o(.bss.SW2) for SW2
+    buttons.o(.ARM.exidx.text.GetSW2) refers to buttons.o(.text.GetSW2) for [Anonymous Symbol]
+    buttons.o(.text.GetSW3) refers to buttons.o(.bss.SW3) for SW3
+    buttons.o(.ARM.exidx.text.GetSW3) refers to buttons.o(.text.GetSW3) for [Anonymous Symbol]
+    buttons.o(.ARM.exidx.text.SlidePot_Init) refers to buttons.o(.text.SlidePot_Init) for [Anonymous Symbol]
+    buttons.o(.ARM.exidx.text.slidePot_Get) refers to buttons.o(.text.slidePot_Get) for [Anonymous Symbol]
+    buttons.o(.text.GetVolume) refers to buttons.o(.text.slidePot_Get) for slidePot_Get
+    buttons.o(.ARM.exidx.text.GetVolume) refers to buttons.o(.text.GetVolume) for [Anonymous Symbol]
+    buttons.o(.text.Keypad_Init) refers to buttons.o(.text.KeypadScan2) for KeypadScan2
+    buttons.o(.text.Keypad_Init) refers to timer2a.o(.text.Timer2A_Init) for Timer2A_Init
+    buttons.o(.ARM.exidx.text.Keypad_Init) refers to buttons.o(.text.Keypad_Init) for [Anonymous Symbol]
+    buttons.o(.text.KeypadScan2) refers to buttons.o(.bss.scanning) for scanning
+    buttons.o(.text.KeypadScan2) refers to buttons.o(.bss.set2) for set2
+    buttons.o(.text.KeypadScan2) refers to buttons.o(.data.prevRowData) for prevRowData
+    buttons.o(.text.KeypadScan2) refers to buttons.o(.data.RowData) for RowData
+    buttons.o(.text.KeypadScan2) refers to buttons.o(.bss.RowNum) for RowNum
+    buttons.o(.ARM.exidx.text.KeypadScan2) refers to buttons.o(.text.KeypadScan2) for [Anonymous Symbol]
+    buttons.o(.text.GPIOPortB_Handler) refers to buttons.o(.bss.x) for x
+    buttons.o(.text.GPIOPortB_Handler) refers to buttons.o(.bss.pressed) for pressed
+    buttons.o(.text.GPIOPortB_Handler) refers to buttons.o(.bss.scanning) for scanning
+    buttons.o(.text.GPIOPortB_Handler) refers to buttons.o(.bss.set2) for set2
+    buttons.o(.text.GPIOPortB_Handler) refers to timer2a.o(.text.Timer2A_Stop) for Timer2A_Stop
+    buttons.o(.text.GPIOPortB_Handler) refers to buttons.o(.text.keypadDebouncer) for keypadDebouncer
+    buttons.o(.text.GPIOPortB_Handler) refers to timer3a.o(.text.Timer3A_Init) for Timer3A_Init
+    buttons.o(.text.GPIOPortB_Handler) refers to buttons.o(.bss.ColNum) for ColNum
+    buttons.o(.ARM.exidx.text.GPIOPortB_Handler) refers to buttons.o(.text.GPIOPortB_Handler) for [Anonymous Symbol]
+    buttons.o(.text.keypadDebouncer) refers to buttons.o(.bss.pressed) for pressed
+    buttons.o(.text.keypadDebouncer) refers to timer3a.o(.text.Timer3A_Stop) for Timer3A_Stop
+    buttons.o(.text.keypadDebouncer) refers to buttons.o(.bss.set2) for set2
+    buttons.o(.text.keypadDebouncer) refers to buttons.o(.text.KeypadScan1) for KeypadScan1
+    buttons.o(.text.keypadDebouncer) refers to timer2a.o(.text.Timer2A_Init) for Timer2A_Init
+    buttons.o(.text.keypadDebouncer) refers to buttons.o(.text.KeypadScan2) for KeypadScan2
+    buttons.o(.ARM.exidx.text.keypadDebouncer) refers to buttons.o(.text.keypadDebouncer) for [Anonymous Symbol]
+    buttons.o(.text.KeypadScan1) refers to timer2a.o(.text.Timer2A_Stop) for Timer2A_Stop
+    buttons.o(.text.KeypadScan1) refers to buttons.o(.text.keypadDebouncer) for keypadDebouncer
+    buttons.o(.text.KeypadScan1) refers to timer3a.o(.text.Timer3A_Init) for Timer3A_Init
+    buttons.o(.text.KeypadScan1) refers to buttons.o(.bss.pressed) for pressed
+    buttons.o(.text.KeypadScan1) refers to buttons.o(.bss.set2) for set2
+    buttons.o(.ARM.exidx.text.KeypadScan1) refers to buttons.o(.text.KeypadScan1) for [Anonymous Symbol]
+    buttons.o(.ARM.exidx.text.Buttons_Get) refers to buttons.o(.text.Buttons_Get) for [Anonymous Symbol]
+    buttons.o(.text.Keypad_Get) refers to buttons.o(.bss.ColNum) for ColNum
+    buttons.o(.text.Keypad_Get) refers to buttons.o(.bss.RowNum) for RowNum
+    buttons.o(.ARM.exidx.text.Keypad_Get) refers to buttons.o(.text.Keypad_Get) for [Anonymous Symbol]
+    timer0a.o(.text.Timer0A_Init) refers to timer0a.o(.bss.PeriodicTask0) for PeriodicTask0
+    timer0a.o(.ARM.exidx.text.Timer0A_Init) refers to timer0a.o(.text.Timer0A_Init) for [Anonymous Symbol]
+    timer0a.o(.text.Timer0A_Handler) refers to timer0a.o(.bss.PeriodicTask0) for PeriodicTask0
+    timer0a.o(.ARM.exidx.text.Timer0A_Handler) refers to timer0a.o(.text.Timer0A_Handler) for [Anonymous Symbol]
+    timer0a.o(.ARM.exidx.text.Timer0A_Stop) refers to timer0a.o(.text.Timer0A_Stop) for [Anonymous Symbol]
+    timer1a.o(.text.Timer1A_Init) refers to timer1a.o(.bss.PeriodicTask1) for PeriodicTask1
+    timer1a.o(.ARM.exidx.text.Timer1A_Init) refers to timer1a.o(.text.Timer1A_Init) for [Anonymous Symbol]
+    timer1a.o(.text.Timer1A_Handler) refers to timer1a.o(.bss.PeriodicTask1) for PeriodicTask1
+    timer1a.o(.ARM.exidx.text.Timer1A_Handler) refers to timer1a.o(.text.Timer1A_Handler) for [Anonymous Symbol]
+    timer1a.o(.ARM.exidx.text.Timer1A_ChangePeriod) refers to timer1a.o(.text.Timer1A_ChangePeriod) for [Anonymous Symbol]
+    timer1a.o(.ARM.exidx.text.Timer1A_Stop) refers to timer1a.o(.text.Timer1A_Stop) for [Anonymous Symbol]
+    pll.o(.ARM.exidx.text.PLL_Init) refers to pll.o(.text.PLL_Init) for [Anonymous Symbol]
+    dmatimer.o(.ARM.exidx.text.Timer5A_Init) refers to dmatimer.o(.text.Timer5A_Init) for [Anonymous Symbol]
+    dmatimer.o(.text.DMA_Init) refers to dmatimer.o(.bss.DestinationPt) for DestinationPt
+    dmatimer.o(.text.DMA_Init) refers to dmatimer.o(.bss.ucControlTable) for ucControlTable
+    dmatimer.o(.text.DMA_Init) refers to dmatimer.o(.text.Timer5A_Init) for Timer5A_Init
+    dmatimer.o(.text.DMA_Init) refers to dmatimer.o(.data.Status) for Status
+    dmatimer.o(.ARM.exidx.text.DMA_Init) refers to dmatimer.o(.text.DMA_Init) for [Anonymous Symbol]
+    dmatimer.o(.text.DMA_Transfer) refers to startup.o(.text) for DisableInterrupts
+    dmatimer.o(.text.DMA_Transfer) refers to dmatimer.o(.data.Status) for Status
+    dmatimer.o(.text.DMA_Transfer) refers to dmatimer.o(.bss.BlockSize) for BlockSize
+    dmatimer.o(.text.DMA_Transfer) refers to dmatimer.o(.bss.NumBlocks) for NumBlocks
+    dmatimer.o(.text.DMA_Transfer) refers to dmatimer.o(.bss.NumberOfBuffersSent) for NumberOfBuffersSent
+    dmatimer.o(.text.DMA_Transfer) refers to dmatimer.o(.bss.SourcePt) for SourcePt
+    dmatimer.o(.text.DMA_Transfer) refers to dmatimer.o(.text.setRegular) for setRegular
+    dmatimer.o(.text.DMA_Transfer) refers to dmatimer.o(.text.setAlternate) for setAlternate
+    dmatimer.o(.ARM.exidx.text.DMA_Transfer) refers to dmatimer.o(.text.DMA_Transfer) for [Anonymous Symbol]
+    dmatimer.o(.text.setRegular) refers to dmatimer.o(.bss.SourcePt) for SourcePt
+    dmatimer.o(.text.setRegular) refers to dmatimer.o(.bss.BlockSize) for BlockSize
+    dmatimer.o(.text.setRegular) refers to dmatimer.o(.bss.ucControlTable) for ucControlTable
+    dmatimer.o(.text.setRegular) refers to dmatimer.o(.bss.DestinationPt) for DestinationPt
+    dmatimer.o(.ARM.exidx.text.setRegular) refers to dmatimer.o(.text.setRegular) for [Anonymous Symbol]
+    dmatimer.o(.text.setAlternate) refers to dmatimer.o(.bss.SourcePt) for SourcePt
+    dmatimer.o(.text.setAlternate) refers to dmatimer.o(.bss.BlockSize) for BlockSize
+    dmatimer.o(.text.setAlternate) refers to dmatimer.o(.bss.ucControlTable) for ucControlTable
+    dmatimer.o(.text.setAlternate) refers to dmatimer.o(.bss.DestinationPt) for DestinationPt
+    dmatimer.o(.ARM.exidx.text.setAlternate) refers to dmatimer.o(.text.setAlternate) for [Anonymous Symbol]
+    dmatimer.o(.text.DMA_Stop) refers to dmatimer.o(.data.Status) for Status
+    dmatimer.o(.ARM.exidx.text.DMA_Stop) refers to dmatimer.o(.text.DMA_Stop) for [Anonymous Symbol]
+    dmatimer.o(.text.Timer5A_Handler) refers to dmatimer.o(.bss.ucControlTable) for ucControlTable
+    dmatimer.o(.text.Timer5A_Handler) refers to dmatimer.o(.bss.NumberOfBuffersSent) for NumberOfBuffersSent
+    dmatimer.o(.text.Timer5A_Handler) refers to dmatimer.o(.bss.NumBlocks) for NumBlocks
+    dmatimer.o(.text.Timer5A_Handler) refers to dmatimer.o(.text.setRegular) for setRegular
+    dmatimer.o(.text.Timer5A_Handler) refers to dmatimer.o(.text.setAlternate) for setAlternate
+    dmatimer.o(.text.Timer5A_Handler) refers to dmatimer.o(.text.DMA_Stop) for DMA_Stop
+    dmatimer.o(.ARM.exidx.text.Timer5A_Handler) refers to dmatimer.o(.text.Timer5A_Handler) for [Anonymous Symbol]
+    dmatimer.o(.text.DMA_Status) refers to dmatimer.o(.data.Status) for Status
+    dmatimer.o(.ARM.exidx.text.DMA_Status) refers to dmatimer.o(.text.DMA_Status) for [Anonymous Symbol]
+    neopixel.o(.ARM.exidx.text.Delay) refers to neopixel.o(.text.Delay) for [Anonymous Symbol]
+    neopixel.o(.text.sendreset) refers to neopixel.o(.text.Delay) for Delay
+    neopixel.o(.ARM.exidx.text.sendreset) refers to neopixel.o(.text.sendreset) for [Anonymous Symbol]
+    neopixel.o(.text.clearbuffer) refers to neopixel.o(.bss.Cursor) for Cursor
+    neopixel.o(.text.clearbuffer) refers to neopixel.o(.bss.Buffer) for Buffer
+    neopixel.o(.ARM.exidx.text.clearbuffer) refers to neopixel.o(.text.clearbuffer) for [Anonymous Symbol]
+    neopixel.o(.text.addColor) refers to neopixel.o(.bss.Cursor) for Cursor
+    neopixel.o(.text.addColor) refers to neopixel.o(.bss.Buffer) for Buffer
+    neopixel.o(.ARM.exidx.text.addColor) refers to neopixel.o(.text.addColor) for [Anonymous Symbol]
+    neopixel.o(.text.setcursor) refers to neopixel.o(.bss.Cursor) for Cursor
+    neopixel.o(.ARM.exidx.text.setcursor) refers to neopixel.o(.text.setcursor) for [Anonymous Symbol]
+    neopixel.o(.text.printBuffer) refers to neopixel.o(.text.sendreset) for sendreset
+    neopixel.o(.text.printBuffer) refers to neopixel.o(.bss.Buffer) for Buffer
+    neopixel.o(.text.printBuffer) refers to dmatimer.o(.text.DMA_Transfer) for DMA_Transfer
+    neopixel.o(.ARM.exidx.text.printBuffer) refers to neopixel.o(.text.printBuffer) for [Anonymous Symbol]
+    neopixel.o(.text.NeoPixel_Init) refers to neopixel.o(.text.sendreset) for sendreset
+    neopixel.o(.text.NeoPixel_Init) refers to dmatimer.o(.text.DMA_Init) for DMA_Init
+    neopixel.o(.text.NeoPixel_Init) refers to neopixel.o(.bss.Vol) for Vol
+    neopixel.o(.text.NeoPixel_Init) refers to neopixel.o(.bss.old_Colors) for old_Colors
+    neopixel.o(.ARM.exidx.text.NeoPixel_Init) refers to neopixel.o(.text.NeoPixel_Init) for [Anonymous Symbol]
+    neopixel.o(.text.SetNeoNotes) refers to neopixel.o(.text.sendreset) for sendreset
+    neopixel.o(.text.SetNeoNotes) refers to neopixel.o(.bss.old_Colors) for old_Colors
+    neopixel.o(.text.SetNeoNotes) refers to neopixel.o(.text.addColor) for addColor
+    neopixel.o(.text.SetNeoNotes) refers to neopixel.o(.text.printBuffer) for printBuffer
+    neopixel.o(.text.SetNeoNotes) refers to neopixel.o(.bss.Vol) for Vol
+    neopixel.o(.text.SetNeoNotes) refers to neopixel.o(.rodata.RGB) for RGB
+    neopixel.o(.ARM.exidx.text.SetNeoNotes) refers to neopixel.o(.text.SetNeoNotes) for [Anonymous Symbol]
+    neopixel.o(.text.setBrightness) refers to neopixel.o(.bss.Vol) for Vol
+    neopixel.o(.text.setBrightness) refers to neopixel.o(.bss.old_Colors) for old_Colors
+    neopixel.o(.text.setBrightness) refers to neopixel.o(.text.SetNeoNotes) for SetNeoNotes
+    neopixel.o(.ARM.exidx.text.setBrightness) refers to neopixel.o(.text.setBrightness) for [Anonymous Symbol]
+    neopixel.o(.text.runNeoTest) refers to neopixel.o(.text.sendreset) for sendreset
+    neopixel.o(.text.runNeoTest) refers to neopixel.o(.bss.Vol) for Vol
+    neopixel.o(.text.runNeoTest) refers to neopixel.o(.rodata.RGB) for RGB
+    neopixel.o(.text.runNeoTest) refers to neopixel.o(.text.addColor) for addColor
+    neopixel.o(.text.runNeoTest) refers to neopixel.o(.text.printBuffer) for printBuffer
+    neopixel.o(.ARM.exidx.text.runNeoTest) refers to neopixel.o(.text.runNeoTest) for [Anonymous Symbol]
+    graphics.o(.text.noteToChars) refers to st7735.o(.text.IntegerToChar) for IntegerToChar
+    graphics.o(.ARM.exidx.text.noteToChars) refers to graphics.o(.text.noteToChars) for [Anonymous Symbol]
+    graphics.o(.text.DrawFirstNote) refers to st7735.o(.text.ST7735_Color565) for ST7735_Color565
+    graphics.o(.text.DrawFirstNote) refers to st7735.o(.text.ST7735_FillRect) for ST7735_FillRect
+    graphics.o(.text.DrawFirstNote) refers to graphics.o(.text.noteToChars) for noteToChars
+    graphics.o(.text.DrawFirstNote) refers to graphics.o(.rodata.Colors) for Colors
+    graphics.o(.text.DrawFirstNote) refers to st7735.o(.text.ST7735_DrawCharS) for ST7735_DrawCharS
+    graphics.o(.ARM.exidx.text.DrawFirstNote) refers to graphics.o(.text.DrawFirstNote) for [Anonymous Symbol]
+    graphics.o(.text.DrawSecondNote) refers to st7735.o(.text.ST7735_Color565) for ST7735_Color565
+    graphics.o(.text.DrawSecondNote) refers to st7735.o(.text.ST7735_FillRect) for ST7735_FillRect
+    graphics.o(.text.DrawSecondNote) refers to graphics.o(.text.noteToChars) for noteToChars
+    graphics.o(.text.DrawSecondNote) refers to graphics.o(.rodata.Colors) for Colors
+    graphics.o(.text.DrawSecondNote) refers to st7735.o(.text.ST7735_DrawCharS) for ST7735_DrawCharS
+    graphics.o(.ARM.exidx.text.DrawSecondNote) refers to graphics.o(.text.DrawSecondNote) for [Anonymous Symbol]
+    graphics.o(.text.DrawThirdNote) refers to st7735.o(.text.ST7735_Color565) for ST7735_Color565
+    graphics.o(.text.DrawThirdNote) refers to st7735.o(.text.ST7735_FillRect) for ST7735_FillRect
+    graphics.o(.text.DrawThirdNote) refers to graphics.o(.text.noteToChars) for noteToChars
+    graphics.o(.text.DrawThirdNote) refers to graphics.o(.rodata.Colors) for Colors
+    graphics.o(.text.DrawThirdNote) refers to st7735.o(.text.ST7735_DrawCharS) for ST7735_DrawCharS
+    graphics.o(.ARM.exidx.text.DrawThirdNote) refers to graphics.o(.text.DrawThirdNote) for [Anonymous Symbol]
+    graphics.o(.text.DrawFourthNote) refers to st7735.o(.text.ST7735_Color565) for ST7735_Color565
+    graphics.o(.text.DrawFourthNote) refers to st7735.o(.text.ST7735_FillRect) for ST7735_FillRect
+    graphics.o(.text.DrawFourthNote) refers to graphics.o(.text.noteToChars) for noteToChars
+    graphics.o(.text.DrawFourthNote) refers to graphics.o(.rodata.Colors) for Colors
+    graphics.o(.text.DrawFourthNote) refers to st7735.o(.text.ST7735_DrawCharS) for ST7735_DrawCharS
+    graphics.o(.ARM.exidx.text.DrawFourthNote) refers to graphics.o(.text.DrawFourthNote) for [Anonymous Symbol]
+    graphics.o(.text.DrawFourNotes) refers to graphics.o(.text.DrawFirstNote) for DrawFirstNote
+    graphics.o(.text.DrawFourNotes) refers to graphics.o(.text.DrawSecondNote) for DrawSecondNote
+    graphics.o(.text.DrawFourNotes) refers to graphics.o(.text.DrawThirdNote) for DrawThirdNote
+    graphics.o(.text.DrawFourNotes) refers to graphics.o(.text.DrawFourthNote) for DrawFourthNote
+    graphics.o(.ARM.exidx.text.DrawFourNotes) refers to graphics.o(.text.DrawFourNotes) for [Anonymous Symbol]
+    graphics.o(.text.FlipMetronomeOn) refers to st7735.o(.text.ST7735_Color565) for ST7735_Color565
+    graphics.o(.text.FlipMetronomeOn) refers to st7735.o(.text.ST7735_FillRect) for ST7735_FillRect
+    graphics.o(.text.FlipMetronomeOn) refers to st7735.o(.text.ST7735_DrawCharS) for ST7735_DrawCharS
+    graphics.o(.text.FlipMetronomeOn) refers to st7735.o(.text.IntegerToChar) for IntegerToChar
+    graphics.o(.ARM.exidx.text.FlipMetronomeOn) refers to graphics.o(.text.FlipMetronomeOn) for [Anonymous Symbol]
+    graphics.o(.text.FlipMetronomeOff) refers to st7735.o(.text.ST7735_Color565) for ST7735_Color565
+    graphics.o(.text.FlipMetronomeOff) refers to st7735.o(.text.ST7735_FillRect) for ST7735_FillRect
+    graphics.o(.ARM.exidx.text.FlipMetronomeOff) refers to graphics.o(.text.FlipMetronomeOff) for [Anonymous Symbol]
+    graphics.o(.text.ArmMetroIndicator) refers to st7735.o(.text.ST7735_Color565) for ST7735_Color565
+    graphics.o(.text.ArmMetroIndicator) refers to st7735.o(.text.ST7735_DrawCharS) for ST7735_DrawCharS
+    graphics.o(.ARM.exidx.text.ArmMetroIndicator) refers to graphics.o(.text.ArmMetroIndicator) for [Anonymous Symbol]
+    graphics.o(.text.DrawSongMenu) refers to st7735.o(.text.ST7735_FillScreen) for ST7735_FillScreen
+    graphics.o(.text.DrawSongMenu) refers to graphics.o(.bss.songSelect) for songSelect
+    graphics.o(.text.DrawSongMenu) refers to st7735.o(.text.ST7735_Color565) for ST7735_Color565
+    graphics.o(.text.DrawSongMenu) refers to st7735.o(.text.ST7735_DrawCharS) for ST7735_DrawCharS
+    graphics.o(.ARM.exidx.text.DrawSongMenu) refers to graphics.o(.text.DrawSongMenu) for [Anonymous Symbol]
+    graphics.o(.text.MoveSongArrowDown) refers to graphics.o(.bss.songSelect) for songSelect
+    graphics.o(.text.MoveSongArrowDown) refers to st7735.o(.text.ST7735_FillRect) for ST7735_FillRect
+    graphics.o(.text.MoveSongArrowDown) refers to st7735.o(.text.ST7735_Color565) for ST7735_Color565
+    graphics.o(.text.MoveSongArrowDown) refers to st7735.o(.text.ST7735_DrawCharS) for ST7735_DrawCharS
+    graphics.o(.ARM.exidx.text.MoveSongArrowDown) refers to graphics.o(.text.MoveSongArrowDown) for [Anonymous Symbol]
+    graphics.o(.text.MoveSongArrowUp) refers to graphics.o(.bss.songSelect) for songSelect
+    graphics.o(.text.MoveSongArrowUp) refers to st7735.o(.text.ST7735_FillRect) for ST7735_FillRect
+    graphics.o(.text.MoveSongArrowUp) refers to st7735.o(.text.ST7735_Color565) for ST7735_Color565
+    graphics.o(.text.MoveSongArrowUp) refers to st7735.o(.text.ST7735_DrawCharS) for ST7735_DrawCharS
+    graphics.o(.ARM.exidx.text.MoveSongArrowUp) refers to graphics.o(.text.MoveSongArrowUp) for [Anonymous Symbol]
+    graphics.o(.text.DisplayNowPlaying) refers to graphics.o(.bss.songSelect) for songSelect
+    graphics.o(.text.DisplayNowPlaying) refers to st7735.o(.text.ST7735_Color565) for ST7735_Color565
+    graphics.o(.text.DisplayNowPlaying) refers to st7735.o(.text.ST7735_DrawCharS) for ST7735_DrawCharS
+    graphics.o(.ARM.exidx.text.DisplayNowPlaying) refers to graphics.o(.text.DisplayNowPlaying) for [Anonymous Symbol]
+    graphics.o(.text.ClearOutNowPlaying) refers to st7735.o(.text.ST7735_FillRect) for ST7735_FillRect
+    graphics.o(.ARM.exidx.text.ClearOutNowPlaying) refers to graphics.o(.text.ClearOutNowPlaying) for [Anonymous Symbol]
+    graphics.o(.text.DrawInstrumentMenu) refers to st7735.o(.text.ST7735_FillScreen) for ST7735_FillScreen
+    graphics.o(.text.DrawInstrumentMenu) refers to graphics.o(.bss.instrumentSelect) for instrumentSelect
+    graphics.o(.text.DrawInstrumentMenu) refers to st7735.o(.text.ST7735_Color565) for ST7735_Color565
+    graphics.o(.text.DrawInstrumentMenu) refers to st7735.o(.text.ST7735_DrawCharS) for ST7735_DrawCharS
+    graphics.o(.ARM.exidx.text.DrawInstrumentMenu) refers to graphics.o(.text.DrawInstrumentMenu) for [Anonymous Symbol]
+    graphics.o(.text.MoveInstrumentArrowDown) refers to graphics.o(.bss.instrumentSelect) for instrumentSelect
+    graphics.o(.text.MoveInstrumentArrowDown) refers to st7735.o(.text.ST7735_FillRect) for ST7735_FillRect
+    graphics.o(.text.MoveInstrumentArrowDown) refers to st7735.o(.text.ST7735_Color565) for ST7735_Color565
+    graphics.o(.text.MoveInstrumentArrowDown) refers to st7735.o(.text.ST7735_DrawCharS) for ST7735_DrawCharS
+    graphics.o(.ARM.exidx.text.MoveInstrumentArrowDown) refers to graphics.o(.text.MoveInstrumentArrowDown) for [Anonymous Symbol]
+    graphics.o(.text.MoveInstrumentArrowUp) refers to graphics.o(.bss.instrumentSelect) for instrumentSelect
+    graphics.o(.text.MoveInstrumentArrowUp) refers to st7735.o(.text.ST7735_FillRect) for ST7735_FillRect
+    graphics.o(.text.MoveInstrumentArrowUp) refers to st7735.o(.text.ST7735_Color565) for ST7735_Color565
+    graphics.o(.text.MoveInstrumentArrowUp) refers to st7735.o(.text.ST7735_DrawCharS) for ST7735_DrawCharS
+    graphics.o(.ARM.exidx.text.MoveInstrumentArrowUp) refers to graphics.o(.text.MoveInstrumentArrowUp) for [Anonymous Symbol]
+    graphics.o(.text.DisplayInstrPlaying) refers to graphics.o(.bss.instrumentSelect) for instrumentSelect
+    graphics.o(.text.DisplayInstrPlaying) refers to st7735.o(.text.ST7735_Color565) for ST7735_Color565
+    graphics.o(.text.DisplayInstrPlaying) refers to st7735.o(.text.ST7735_DrawCharS) for ST7735_DrawCharS
+    graphics.o(.ARM.exidx.text.DisplayInstrPlaying) refers to graphics.o(.text.DisplayInstrPlaying) for [Anonymous Symbol]
+    graphics.o(.text.ClearOutInstrPlaying) refers to st7735.o(.text.ST7735_FillRect) for ST7735_FillRect
+    graphics.o(.ARM.exidx.text.ClearOutInstrPlaying) refers to graphics.o(.text.ClearOutInstrPlaying) for [Anonymous Symbol]
+    timer2a.o(.text.Timer2A_Init) refers to timer2a.o(.bss.PeriodicTask2) for PeriodicTask2
+    timer2a.o(.ARM.exidx.text.Timer2A_Init) refers to timer2a.o(.text.Timer2A_Init) for [Anonymous Symbol]
+    timer2a.o(.text.Timer2A_Handler) refers to timer2a.o(.bss.PeriodicTask2) for PeriodicTask2
+    timer2a.o(.ARM.exidx.text.Timer2A_Handler) refers to timer2a.o(.text.Timer2A_Handler) for [Anonymous Symbol]
+    timer2a.o(.ARM.exidx.text.Timer2A_Stop) refers to timer2a.o(.text.Timer2A_Stop) for [Anonymous Symbol]
+    timer3a.o(.text.Timer3A_Init) refers to timer3a.o(.bss.PeriodicTask3) for PeriodicTask3
+    timer3a.o(.ARM.exidx.text.Timer3A_Init) refers to timer3a.o(.text.Timer3A_Init) for [Anonymous Symbol]
+    timer3a.o(.text.Timer3A_Handler) refers to timer3a.o(.bss.PeriodicTask3) for PeriodicTask3
+    timer3a.o(.ARM.exidx.text.Timer3A_Handler) refers to timer3a.o(.text.Timer3A_Handler) for [Anonymous Symbol]
+    timer3a.o(.ARM.exidx.text.Timer3A_Stop) refers to timer3a.o(.text.Timer3A_Stop) for [Anonymous Symbol]
+    flexsensor.o(.text.Flex_Init) refers to adcswtrigger.o(.text.ADC_Init3210) for ADC_Init3210
+    flexsensor.o(.ARM.exidx.text.Flex_Init) refers to flexsensor.o(.text.Flex_Init) for [Anonymous Symbol]
+    flexsensor.o(.text.Flex_Read) refers to flexsensor.o(.bss.adc_data) for adc_data
+    flexsensor.o(.text.Flex_Read) refers to adcswtrigger.o(.text.ADC_In3210) for ADC_In3210
+    flexsensor.o(.ARM.exidx.text.Flex_Read) refers to flexsensor.o(.text.Flex_Read) for [Anonymous Symbol]
+    flexsensor.o(.text.Return_Note) refers to flexsensor.o(.bss.adc_data) for adc_data
+    flexsensor.o(.text.Return_Note) refers to adcswtrigger.o(.text.ADC_In3210) for ADC_In3210
+    flexsensor.o(.text.Return_Note) refers to flexsensor.o(.bss.oldNote) for oldNote
+    flexsensor.o(.ARM.exidx.text.Return_Note) refers to flexsensor.o(.text.Return_Note) for [Anonymous Symbol]
+    flexsensor.o(.text.Return_Chord) refers to flexsensor.o(.bss.adc_data) for adc_data
+    flexsensor.o(.text.Return_Chord) refers to adcswtrigger.o(.text.ADC_In3210) for ADC_In3210
+    flexsensor.o(.text.Return_Chord) refers to flexsensor.o(.bss.oldChord) for oldChord
+    flexsensor.o(.ARM.exidx.text.Return_Chord) refers to flexsensor.o(.text.Return_Chord) for [Anonymous Symbol]
+    flexsensor.o(.text.Return_Volume) refers to flexsensor.o(.bss.adc_data) for adc_data
+    flexsensor.o(.text.Return_Volume) refers to adcswtrigger.o(.text.ADC_In3210) for ADC_In3210
+    flexsensor.o(.ARM.exidx.text.Return_Volume) refers to flexsensor.o(.text.Return_Volume) for [Anonymous Symbol]
+    adcswtrigger.o(.ARM.exidx.text.ADC0_InitSWTriggerSeq3_Ch9) refers to adcswtrigger.o(.text.ADC0_InitSWTriggerSeq3_Ch9) for [Anonymous Symbol]
+    adcswtrigger.o(.ARM.exidx.text.ADC0_InitSWTriggerSeq3_Ch7) refers to adcswtrigger.o(.text.ADC0_InitSWTriggerSeq3_Ch7) for [Anonymous Symbol]
+    adcswtrigger.o(.ARM.exidx.text.ADC0_InitSWTriggerSeq3) refers to adcswtrigger.o(.text.ADC0_InitSWTriggerSeq3) for [Anonymous Symbol]
+    adcswtrigger.o(.ARM.exidx.text.ADC0_InSeq3) refers to adcswtrigger.o(.text.ADC0_InSeq3) for [Anonymous Symbol]
+    adcswtrigger.o(.ARM.exidx.text.ADC_Init89) refers to adcswtrigger.o(.text.ADC_Init89) for [Anonymous Symbol]
+    adcswtrigger.o(.ARM.exidx.text.ADC_In89) refers to adcswtrigger.o(.text.ADC_In89) for [Anonymous Symbol]
+    adcswtrigger.o(.text.ADC0_InitSWTriggerSeq2) refers to adcswtrigger.o(.bss.UserTask2) for UserTask2
+    adcswtrigger.o(.ARM.exidx.text.ADC0_InitSWTriggerSeq2) refers to adcswtrigger.o(.text.ADC0_InitSWTriggerSeq2) for [Anonymous Symbol]
+    adcswtrigger.o(.text.ADC0_InSeq2) refers to adcswtrigger.o(.bss.UserTask2) for UserTask2
+    adcswtrigger.o(.ARM.exidx.text.ADC0_InSeq2) refers to adcswtrigger.o(.text.ADC0_InSeq2) for [Anonymous Symbol]
+    adcswtrigger.o(.ARM.exidx.text.ADC0_InitSWTriggerSeq3_InternalTemperature) refers to adcswtrigger.o(.text.ADC0_InitSWTriggerSeq3_InternalTemperature) for [Anonymous Symbol]
+    adcswtrigger.o(.ARM.exidx.text.ADC0_InSeq3_InternalTemperature) refers to adcswtrigger.o(.text.ADC0_InSeq3_InternalTemperature) for [Anonymous Symbol]
+    adcswtrigger.o(.ARM.exidx.text.ADC_Init3210) refers to adcswtrigger.o(.text.ADC_Init3210) for [Anonymous Symbol]
+    adcswtrigger.o(.ARM.exidx.text.ADC_In3210) refers to adcswtrigger.o(.text.ADC_In3210) for [Anonymous Symbol]
+    timer4a.o(.text.Timer4A_Init) refers to timer4a.o(.bss.PeriodicTask4) for PeriodicTask4
+    timer4a.o(.ARM.exidx.text.Timer4A_Init) refers to timer4a.o(.text.Timer4A_Init) for [Anonymous Symbol]
+    timer4a.o(.text.Timer4A_Handler) refers to timer4a.o(.bss.PeriodicTask4) for PeriodicTask4
+    timer4a.o(.ARM.exidx.text.Timer4A_Handler) refers to timer4a.o(.text.Timer4A_Handler) for [Anonymous Symbol]
+    timer4a.o(.ARM.exidx.text.Timer4A_Stop) refers to timer4a.o(.text.Timer4A_Stop) for [Anonymous Symbol]
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000D) for __rt_final_cpp
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$0000000F) for __rt_final_exit
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry8b.o(.ARM.Collect$$$$0000000A) for _main_cpp_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    malloc.o(i.free) refers to mvars.o(.data) for __microlib_freelist
+    malloc.o(i.malloc) refers to mvars.o(.data) for __microlib_freelist_initialised
+    malloc.o(i.malloc) refers to mvars.o(.data) for __microlib_freelist
+    malloc.o(i.malloc) refers to startup.o(HEAP) for __heap_base
+    mallocr.o(i.__free$realloc) refers to mvars.o(.data) for __microlib_freelist
+    mallocr.o(i.__malloc$realloc) refers to mallocr.o(i.internal_alloc) for internal_alloc
+    mallocr.o(i.__malloc$realloc) refers to mvars.o(.data) for __microlib_freelist_initialised
+    mallocr.o(i.__malloc$realloc) refers to startup.o(HEAP) for __heap_base
+    mallocr.o(i.__malloc$realloc) refers to mvars.o(.data) for __microlib_freelist
+    mallocr.o(i.internal_alloc) refers to memcpya.o(.text) for __aeabi_memcpy
+    mallocr.o(i.internal_alloc) refers to mvars.o(.data) for __microlib_freelist
+    mallocr.o(i.realloc) refers to mallocr.o(i.__free$realloc) for __free$realloc
+    mallocr.o(i.realloc) refers to mallocr.o(i.internal_alloc) for internal_alloc
+    mallocr.o(i.realloc) refers to mallocr.o(i.__malloc$realloc) for __malloc$realloc
+    mallocr.o(i.realloc) refers to mvars.o(.data) for __microlib_freelist
+    malloca.o(i.__aligned_malloc) refers to mvars.o(.data) for __microlib_freelist_initialised
+    malloca.o(i.__aligned_malloc) refers to mvars.o(.data) for __microlib_freelist
+    malloca.o(i.__aligned_malloc) refers to startup.o(HEAP) for __heap_base
+    malloca.o(i.__free$memalign) refers to mvars.o(.data) for __microlib_freelist
+    malloca.o(i.__malloc$memalign) refers to malloca.o(i.__aligned_malloc) for __aligned_malloc
+    mallocra.o(i.__aligned_malloc$realloc) refers to mallocra.o(i.internal_alloc) for internal_alloc
+    mallocra.o(i.__aligned_malloc$realloc) refers to mvars.o(.data) for __microlib_freelist_initialised
+    mallocra.o(i.__aligned_malloc$realloc) refers to startup.o(HEAP) for __heap_base
+    mallocra.o(i.__aligned_malloc$realloc) refers to mvars.o(.data) for __microlib_freelist
+    mallocra.o(i.__free$realloc$memalign) refers to mvars.o(.data) for __microlib_freelist
+    mallocra.o(i.__malloc$realloc$memalign) refers to mallocra.o(i.__aligned_malloc$realloc) for __aligned_malloc$realloc
+    mallocra.o(i.__realloc$memalign) refers to mallocra.o(i.__free$realloc$memalign) for __free$realloc$memalign
+    mallocra.o(i.__realloc$memalign) refers to mallocra.o(i.internal_alloc) for internal_alloc
+    mallocra.o(i.__realloc$memalign) refers to mallocra.o(i.__malloc$realloc$memalign) for __malloc$realloc$memalign
+    mallocra.o(i.__realloc$memalign) refers to mvars.o(.data) for __microlib_freelist
+    mallocra.o(i.internal_alloc) refers to memcpya.o(.text) for __aeabi_memcpy
+    mallocra.o(i.internal_alloc) refers to mvars.o(.data) for __microlib_freelist
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(.ARM.Collect$$$$00002712) refers to startup.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to startup.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing startup.o(HEAP), (0 bytes).
+    Removing startup.o(.text), (28 bytes).
+    Removing musicgloves.o(.text), (0 bytes).
+    Removing musicgloves.o(.text.main_NeoPixel), (46 bytes).
+    Removing musicgloves.o(.ARM.exidx.text.main_NeoPixel), (8 bytes).
+    Removing musicgloves.o(.text.main_Chords), (46 bytes).
+    Removing musicgloves.o(.ARM.exidx.text.main_Chords), (8 bytes).
+    Removing musicgloves.o(.text.main_keypad), (62 bytes).
+    Removing musicgloves.o(.ARM.exidx.text.main_keypad), (8 bytes).
+    Removing musicgloves.o(.text.main_lcddisplay), (40 bytes).
+    Removing musicgloves.o(.ARM.exidx.text.main_lcddisplay), (8 bytes).
+    Removing musicgloves.o(.text.main_flex), (36 bytes).
+    Removing musicgloves.o(.ARM.exidx.text.main_flex), (8 bytes).
+    Removing musicgloves.o(.text.main_flex_music), (164 bytes).
+    Removing musicgloves.o(.ARM.exidx.text.main_flex_music), (8 bytes).
+    Removing musicgloves.o(.text.main_idk), (1360 bytes).
+    Removing musicgloves.o(.ARM.exidx.text.main_idk), (8 bytes).
+    Removing musicgloves.o(.text.main_final), (106 bytes).
+    Removing musicgloves.o(.ARM.exidx.text.main_final), (8 bytes).
+    Removing launchpad.o(.text), (0 bytes).
+    Removing launchpad.o(.text.LaunchPad_Init), (116 bytes).
+    Removing launchpad.o(.ARM.exidx.text.LaunchPad_Init), (8 bytes).
+    Removing launchpad.o(.text.LaunchPad_Input), (34 bytes).
+    Removing launchpad.o(.ARM.exidx.text.LaunchPad_Input), (8 bytes).
+    Removing launchpad.o(.text.LaunchPad_WaitForTouch), (68 bytes).
+    Removing launchpad.o(.ARM.exidx.text.LaunchPad_WaitForTouch), (8 bytes).
+    Removing launchpad.o(.text.DelayMs), (46 bytes).
+    Removing launchpad.o(.ARM.exidx.text.DelayMs), (8 bytes).
+    Removing launchpad.o(.text.LaunchPad_WaitForRelease), (126 bytes).
+    Removing launchpad.o(.ARM.exidx.text.LaunchPad_WaitForRelease), (8 bytes).
+    Removing launchpad.o(.text.LaunchPad_Output), (26 bytes).
+    Removing launchpad.o(.ARM.exidx.text.LaunchPad_Output), (8 bytes).
+    Removing texas.o(.text), (0 bytes).
+    Removing texas.o(.text.Scope), (24 bytes).
+    Removing texas.o(.ARM.exidx.text.Scope), (8 bytes).
+    Removing texas.o(.text.Timer5A_Stop), (48 bytes).
+    Removing texas.o(.ARM.exidx.text.Timer5A_Stop), (8 bytes).
+    Removing texas.o(.text.UART_Init), (196 bytes).
+    Removing texas.o(.ARM.exidx.text.UART_Init), (8 bytes).
+    Removing texas.o(.text.ADC1_InitPD3), (252 bytes).
+    Removing texas.o(.ARM.exidx.text.ADC1_InitPD3), (8 bytes).
+    Removing texas.o(.text.ADC1_Init_PD2), (252 bytes).
+    Removing texas.o(.ARM.exidx.text.ADC1_Init_PD2), (8 bytes).
+    Removing texas.o(.text.ADC1_Init_PE2), (256 bytes).
+    Removing texas.o(.ARM.exidx.text.ADC1_Init_PE2), (8 bytes).
+    Removing texas.o(.text.ADC1_Init_PB5), (252 bytes).
+    Removing texas.o(.ARM.exidx.text.ADC1_Init_PB5), (8 bytes).
+    Removing texas.o(.text.LogicAnalyzerA), (28 bytes).
+    Removing texas.o(.ARM.exidx.text.LogicAnalyzerA), (8 bytes).
+    Removing texas.o(.text.LogicAnalyzerB), (26 bytes).
+    Removing texas.o(.ARM.exidx.text.LogicAnalyzerB), (8 bytes).
+    Removing texas.o(.text.LogicAnalyzerC), (28 bytes).
+    Removing texas.o(.ARM.exidx.text.LogicAnalyzerC), (8 bytes).
+    Removing texas.o(.text.LogicAnalyzerE), (26 bytes).
+    Removing texas.o(.ARM.exidx.text.LogicAnalyzerE), (8 bytes).
+    Removing texas.o(.text.LogicAnalyzerF), (26 bytes).
+    Removing texas.o(.ARM.exidx.text.LogicAnalyzerF), (8 bytes).
+    Removing texas.o(.text.TExaS_Stop), (8 bytes).
+    Removing texas.o(.ARM.exidx.text.TExaS_Stop), (8 bytes).
+    Removing st7735.o(.text), (0 bytes).
+    Removing st7735.o(.text.Delay1ms), (46 bytes).
+    Removing st7735.o(.ARM.exidx.text.Delay1ms), (8 bytes).
+    Removing st7735.o(.text.ST7735_InitB), (50 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_InitB), (8 bytes).
+    Removing st7735.o(.text.commonInit), (418 bytes).
+    Removing st7735.o(.ARM.exidx.text.commonInit), (8 bytes).
+    Removing st7735.o(.text.ST7735_SetCursor), (54 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_SetCursor), (8 bytes).
+    Removing st7735.o(.text.ST7735_FillScreen), (52 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_FillScreen), (8 bytes).
+    Removing st7735.o(.text.ST7735_InitR), (166 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_InitR), (8 bytes).
+    Removing st7735.o(.text.commandList), (170 bytes).
+    Removing st7735.o(.ARM.exidx.text.commandList), (8 bytes).
+    Removing st7735.o(.text.writecommand), (90 bytes).
+    Removing st7735.o(.ARM.exidx.text.writecommand), (8 bytes).
+    Removing st7735.o(.text.writedata), (58 bytes).
+    Removing st7735.o(.ARM.exidx.text.writedata), (8 bytes).
+    Removing st7735.o(.text.ST7735_DrawPixel), (116 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_DrawPixel), (8 bytes).
+    Removing st7735.o(.text.setAddrWindow), (148 bytes).
+    Removing st7735.o(.ARM.exidx.text.setAddrWindow), (8 bytes).
+    Removing st7735.o(.text.pushColor), (28 bytes).
+    Removing st7735.o(.ARM.exidx.text.pushColor), (8 bytes).
+    Removing st7735.o(.text.deselect), (36 bytes).
+    Removing st7735.o(.ARM.exidx.text.deselect), (8 bytes).
+    Removing st7735.o(.text.ST7735_DrawFastVLine), (204 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_DrawFastVLine), (8 bytes).
+    Removing st7735.o(.text.ST7735_DrawFastHLine), (204 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_DrawFastHLine), (8 bytes).
+    Removing st7735.o(.text.ST7735_FillRect), (324 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_FillRect), (8 bytes).
+    Removing st7735.o(.text.ST7735_DrawSmallCircle), (218 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_DrawSmallCircle), (8 bytes).
+    Removing st7735.o(.text.ST7735_DrawCircle), (218 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_DrawCircle), (8 bytes).
+    Removing st7735.o(.text.ST7735_Color565), (48 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_Color565), (8 bytes).
+    Removing st7735.o(.text.ST7735_SwapColor), (28 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_SwapColor), (8 bytes).
+    Removing st7735.o(.text.ST7735_DrawBitmap), (594 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_DrawBitmap), (8 bytes).
+    Removing st7735.o(.text.ST7735_DrawCharS), (438 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_DrawCharS), (8 bytes).
+    Removing st7735.o(.text.ST7735_DrawChar), (438 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_DrawChar), (8 bytes).
+    Removing st7735.o(.text.ST7735_DrawString), (154 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_DrawString), (8 bytes).
+    Removing st7735.o(.text.fillmessage), (112 bytes).
+    Removing st7735.o(.ARM.exidx.text.fillmessage), (8 bytes).
+    Removing st7735.o(.text.fillmessage4), (164 bytes).
+    Removing st7735.o(.ARM.exidx.text.fillmessage4), (8 bytes).
+    Removing st7735.o(.text.fillmessage5), (218 bytes).
+    Removing st7735.o(.ARM.exidx.text.fillmessage5), (8 bytes).
+    Removing st7735.o(.text.ST7735_OutUDec), (166 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_OutUDec), (8 bytes).
+    Removing st7735.o(.text.ST7735_OutUDec4), (166 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_OutUDec4), (8 bytes).
+    Removing st7735.o(.text.ST7735_OutUDec5), (166 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_OutUDec5), (8 bytes).
+    Removing st7735.o(.text.ST7735_SetRotation), (294 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_SetRotation), (8 bytes).
+    Removing st7735.o(.text.ST7735_InvertDisplay), (36 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_InvertDisplay), (8 bytes).
+    Removing st7735.o(.text.ST7735_PlotClear), (144 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_PlotClear), (8 bytes).
+    Removing st7735.o(.text.ST7735_PlotPoint), (222 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_PlotPoint), (8 bytes).
+    Removing st7735.o(.text.ST7735_PlotLine), (462 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_PlotLine), (8 bytes).
+    Removing st7735.o(.text.ST7735_PlotPoints), (314 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_PlotPoints), (8 bytes).
+    Removing st7735.o(.text.ST7735_PlotBar), (138 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_PlotBar), (8 bytes).
+    Removing st7735.o(.text.ST7735_PlotdBfs), (96 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_PlotdBfs), (8 bytes).
+    Removing st7735.o(.text.ST7735_PlotNext), (48 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_PlotNext), (8 bytes).
+    Removing st7735.o(.text.ST7735_PlotNextErase), (90 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_PlotNextErase), (8 bytes).
+    Removing st7735.o(.text.ST7735_OutChar), (270 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_OutChar), (8 bytes).
+    Removing st7735.o(.text.ST7735_OutString), (36 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_OutString), (8 bytes).
+    Removing st7735.o(.text.ST7735_SetTextColor), (24 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_SetTextColor), (8 bytes).
+    Removing st7735.o(.text.fputc), (22 bytes).
+    Removing st7735.o(.ARM.exidx.text.fputc), (8 bytes).
+    Removing st7735.o(.text.fgetc), (10 bytes).
+    Removing st7735.o(.ARM.exidx.text.fgetc), (8 bytes).
+    Removing st7735.o(.text.ferror), (12 bytes).
+    Removing st7735.o(.ARM.exidx.text.ferror), (8 bytes).
+    Removing st7735.o(.text.Output_Init), (16 bytes).
+    Removing st7735.o(.ARM.exidx.text.Output_Init), (8 bytes).
+    Removing st7735.o(.text.Output_Clear), (10 bytes).
+    Removing st7735.o(.ARM.exidx.text.Output_Clear), (8 bytes).
+    Removing st7735.o(.text.Output_Off), (8 bytes).
+    Removing st7735.o(.ARM.exidx.text.Output_Off), (8 bytes).
+    Removing st7735.o(.text.Output_On), (8 bytes).
+    Removing st7735.o(.ARM.exidx.text.Output_On), (8 bytes).
+    Removing st7735.o(.text.Output_Color), (18 bytes).
+    Removing st7735.o(.ARM.exidx.text.Output_Color), (8 bytes).
+    Removing st7735.o(.text.ST7735_sDecOut2), (480 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_sDecOut2), (8 bytes).
+    Removing st7735.o(.text.ST7735_uBinOut6), (354 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_uBinOut6), (8 bytes).
+    Removing st7735.o(.text.plotLineX), (272 bytes).
+    Removing st7735.o(.ARM.exidx.text.plotLineX), (8 bytes).
+    Removing st7735.o(.text.plotLineY), (272 bytes).
+    Removing st7735.o(.ARM.exidx.text.plotLineY), (8 bytes).
+    Removing st7735.o(.text.ST7735_Line), (232 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_Line), (8 bytes).
+    Removing st7735.o(.text.ST7735_SetX), (70 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_SetX), (8 bytes).
+    Removing st7735.o(.text.ST7735_XYplotInit), (76 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_XYplotInit), (8 bytes).
+    Removing st7735.o(.text.ST7735_XYplot), (426 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_XYplot), (8 bytes).
+    Removing st7735.o(.text.get_exponential), (70 bytes).
+    Removing st7735.o(.ARM.exidx.text.get_exponential), (8 bytes).
+    Removing st7735.o(.text.Extract_signed), (70 bytes).
+    Removing st7735.o(.ARM.exidx.text.Extract_signed), (8 bytes).
+    Removing st7735.o(.text.Extract_unsigned), (66 bytes).
+    Removing st7735.o(.ARM.exidx.text.Extract_unsigned), (8 bytes).
+    Removing st7735.o(.text.IntegerToChar), (64 bytes).
+    Removing st7735.o(.ARM.exidx.text.IntegerToChar), (8 bytes).
+    Removing st7735.o(.text.ST7735_sDecOut3), (278 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_sDecOut3), (8 bytes).
+    Removing st7735.o(.text.ST7735_uBinOut5), (236 bytes).
+    Removing st7735.o(.ARM.exidx.text.ST7735_uBinOut5), (8 bytes).
+    Removing st7735.o(.bss.StX), (4 bytes).
+    Removing st7735.o(.bss.StY), (4 bytes).
+    Removing st7735.o(.data.StTextColor), (2 bytes).
+    Removing st7735.o(.rodata.Bcmd), (103 bytes).
+    Removing st7735.o(.rodata.Rcmd1), (59 bytes).
+    Removing st7735.o(.rodata.Rcmd2green), (13 bytes).
+    Removing st7735.o(.bss.ColStart), (1 bytes).
+    Removing st7735.o(.bss.RowStart), (1 bytes).
+    Removing st7735.o(.rodata.Rcmd2red), (13 bytes).
+    Removing st7735.o(.rodata.Rcmd3), (43 bytes).
+    Removing st7735.o(.bss.TabColor), (1 bytes).
+    Removing st7735.o(.data._width), (2 bytes).
+    Removing st7735.o(.data._height), (2 bytes).
+    Removing st7735.o(.rodata.smallCircle), (36 bytes).
+    Removing st7735.o(.rodata.circle), (60 bytes).
+    Removing st7735.o(.rodata.Font), (1275 bytes).
+    Removing st7735.o(.bss.Message), (12 bytes).
+    Removing st7735.o(.bss.Messageindex), (4 bytes).
+    Removing st7735.o(.bss.Rotation), (1 bytes).
+    Removing st7735.o(.bss.Ymax), (4 bytes).
+    Removing st7735.o(.bss.Ymin), (4 bytes).
+    Removing st7735.o(.bss.Yrange), (4 bytes).
+    Removing st7735.o(.bss.X), (4 bytes).
+    Removing st7735.o(.bss.lastj), (4 bytes).
+    Removing st7735.o(.rodata.dBfs), (512 bytes).
+    Removing st7735.o(.rodata.str1.1), (103 bytes).
+    Removing st7735.o(.bss.low_x), (4 bytes).
+    Removing st7735.o(.bss.high_x), (4 bytes).
+    Removing st7735.o(.bss.low_y), (4 bytes).
+    Removing st7735.o(.bss.high_y), (4 bytes).
+    Removing dac.o(.text), (0 bytes).
+    Removing dac.o(.text.DAC_Init), (214 bytes).
+    Removing dac.o(.ARM.exidx.text.DAC_Init), (8 bytes).
+    Removing dac.o(.text.DAC_Out), (46 bytes).
+    Removing dac.o(.ARM.exidx.text.DAC_Out), (8 bytes).
+    Removing music.o(.text), (0 bytes).
+    Removing music.o(.text.metronomeHit), (128 bytes).
+    Removing music.o(.ARM.exidx.text.metronomeHit), (8 bytes).
+    Removing music.o(.text.SetMetronome), (128 bytes).
+    Removing music.o(.ARM.exidx.text.SetMetronome), (8 bytes).
+    Removing music.o(.text.SetVolume), (72 bytes).
+    Removing music.o(.ARM.exidx.text.SetVolume), (8 bytes).
+    Removing music.o(.text.play1Note), (516 bytes).
+    Removing music.o(.ARM.exidx.text.play1Note), (8 bytes).
+    Removing music.o(.text.Play1Note), (106 bytes).
+    Removing music.o(.ARM.exidx.text.Play1Note), (8 bytes).
+    Removing music.o(.text.twoNotes), (534 bytes).
+    Removing music.o(.ARM.exidx.text.twoNotes), (8 bytes).
+    Removing music.o(.text.Play2Notes), (130 bytes).
+    Removing music.o(.ARM.exidx.text.Play2Notes), (8 bytes).
+    Removing music.o(.text.threeNotes), (636 bytes).
+    Removing music.o(.ARM.exidx.text.threeNotes), (8 bytes).
+    Removing music.o(.text.Play3Notes), (136 bytes).
+    Removing music.o(.ARM.exidx.text.Play3Notes), (8 bytes).
+    Removing music.o(.text.fourNotes), (716 bytes).
+    Removing music.o(.ARM.exidx.text.fourNotes), (8 bytes).
+    Removing music.o(.text.Play4Notes), (166 bytes).
+    Removing music.o(.ARM.exidx.text.Play4Notes), (8 bytes).
+    Removing music.o(.text.PlayNotes), (236 bytes).
+    Removing music.o(.ARM.exidx.text.PlayNotes), (8 bytes).
+    Removing music.o(.text.playNoteSong), (852 bytes).
+    Removing music.o(.ARM.exidx.text.playNoteSong), (8 bytes).
+    Removing music.o(.text.nextNoteSong), (168 bytes).
+    Removing music.o(.ARM.exidx.text.nextNoteSong), (8 bytes).
+    Removing music.o(.text.PlaySongDemo), (152 bytes).
+    Removing music.o(.ARM.exidx.text.PlaySongDemo), (8 bytes).
+    Removing music.o(.text.nextNoteFF), (384 bytes).
+    Removing music.o(.ARM.exidx.text.nextNoteFF), (8 bytes).
+    Removing music.o(.text.PlayFairyFountain), (114 bytes).
+    Removing music.o(.ARM.exidx.text.PlayFairyFountain), (8 bytes).
+    Removing music.o(.text.Timer0A_Function2), (1032 bytes).
+    Removing music.o(.ARM.exidx.text.Timer0A_Function2), (8 bytes).
+    Removing music.o(.text.nextOne), (612 bytes).
+    Removing music.o(.ARM.exidx.text.nextOne), (8 bytes).
+    Removing music.o(.text.PlayChordProgression), (244 bytes).
+    Removing music.o(.ARM.exidx.text.PlayChordProgression), (8 bytes).
+    Removing music.o(.text.stopChords), (12 bytes).
+    Removing music.o(.ARM.exidx.text.stopChords), (8 bytes).
+    Removing music.o(.rodata.PERIODS), (344 bytes).
+    Removing music.o(.rodata.Wave2), (256 bytes).
+    Removing music.o(.rodata.Click64), (256 bytes).
+    Removing music.o(.rodata.Sin64), (256 bytes).
+    Removing music.o(.rodata.SinZeroMean64), (256 bytes).
+    Removing music.o(.rodata.Flute64), (256 bytes).
+    Removing music.o(.rodata.Bassoon64), (128 bytes).
+    Removing music.o(.rodata.Guitar64), (128 bytes).
+    Removing music.o(.rodata.Instruments), (384 bytes).
+    Removing music.o(.data.kpLength), (592 bytes).
+    Removing music.o(.data.kpNotes), (296 bytes).
+    Removing music.o(.data.songLength), (140 bytes).
+    Removing music.o(.data.songNotes), (210 bytes).
+    Removing music.o(.bss.PERIOD), (4 bytes).
+    Removing music.o(.data.FIRST), (4 bytes).
+    Removing music.o(.bss.SECOND), (4 bytes).
+    Removing music.o(.bss.THIRD), (4 bytes).
+    Removing music.o(.data.VOL), (4 bytes).
+    Removing music.o(.bss.INUM), (4 bytes).
+    Removing music.o(.bss.NINDEX), (4 bytes).
+    Removing music.o(.bss.COUNT), (4 bytes).
+    Removing music.o(.bss.PERIOD2), (4 bytes).
+    Removing music.o(.bss.INUM2), (4 bytes).
+    Removing music.o(.bss.MetronomeStage), (4 bytes).
+    Removing music.o(.bss.Metronome), (4 bytes).
+    Removing music.o(.bss.singleI), (4 bytes).
+    Removing music.o(.bss.moment1), (4 bytes).
+    Removing music.o(.bss.moment2), (4 bytes).
+    Removing music.o(.bss.out1), (2 bytes).
+    Removing music.o(.bss.out2), (2 bytes).
+    Removing music.o(.bss.playing), (4 bytes).
+    Removing music.o(.bss.BASE), (4 bytes).
+    Removing music.o(.bss.T), (16 bytes).
+    Removing music.o(.bss.FOURTH), (4 bytes).
+    Removing music.o(.rodata.CHORDS), (96 bytes).
+    Removing music.o(.data.FairyFountainLength), (536 bytes).
+    Removing music.o(.data.FairyFountainNotes), (1072 bytes).
+    Removing music.o(.bss.T2), (12 bytes).
+    Removing music.o(.bss.FIRST2), (4 bytes).
+    Removing music.o(.bss.SECOND2), (4 bytes).
+    Removing music.o(.bss.THIRD2), (4 bytes).
+    Removing music.o(.bss.BASE2), (4 bytes).
+    Removing music.o(.bss.kaepora), (16 bytes).
+    Removing music.o(.bss.M), (4 bytes).
+    Removing buttons.o(.text), (0 bytes).
+    Removing buttons.o(.text.Button_Init), (208 bytes).
+    Removing buttons.o(.ARM.exidx.text.Button_Init), (8 bytes).
+    Removing buttons.o(.ARM.exidx.text.GPIOPortC_Handler), (8 bytes).
+    Removing buttons.o(.ARM.exidx.text.switch_debouncer), (8 bytes).
+    Removing buttons.o(.ARM.exidx.text.wait_for_fall), (8 bytes).
+    Removing buttons.o(.text.GetSW1), (28 bytes).
+    Removing buttons.o(.ARM.exidx.text.GetSW1), (8 bytes).
+    Removing buttons.o(.text.GetSW2), (28 bytes).
+    Removing buttons.o(.ARM.exidx.text.GetSW2), (8 bytes).
+    Removing buttons.o(.text.GetSW3), (28 bytes).
+    Removing buttons.o(.ARM.exidx.text.GetSW3), (8 bytes).
+    Removing buttons.o(.text.SlidePot_Init), (292 bytes).
+    Removing buttons.o(.ARM.exidx.text.SlidePot_Init), (8 bytes).
+    Removing buttons.o(.text.slidePot_Get), (70 bytes).
+    Removing buttons.o(.ARM.exidx.text.slidePot_Get), (8 bytes).
+    Removing buttons.o(.text.GetVolume), (74 bytes).
+    Removing buttons.o(.ARM.exidx.text.GetVolume), (8 bytes).
+    Removing buttons.o(.text.Keypad_Init), (232 bytes).
+    Removing buttons.o(.ARM.exidx.text.Keypad_Init), (8 bytes).
+    Removing buttons.o(.ARM.exidx.text.KeypadScan2), (8 bytes).
+    Removing buttons.o(.ARM.exidx.text.GPIOPortB_Handler), (8 bytes).
+    Removing buttons.o(.ARM.exidx.text.keypadDebouncer), (8 bytes).
+    Removing buttons.o(.ARM.exidx.text.KeypadScan1), (8 bytes).
+    Removing buttons.o(.text.Buttons_Get), (6 bytes).
+    Removing buttons.o(.ARM.exidx.text.Buttons_Get), (8 bytes).
+    Removing buttons.o(.text.Keypad_Get), (390 bytes).
+    Removing buttons.o(.ARM.exidx.text.Keypad_Get), (8 bytes).
+    Removing timer0a.o(.text), (0 bytes).
+    Removing timer0a.o(.text.Timer0A_Init), (162 bytes).
+    Removing timer0a.o(.ARM.exidx.text.Timer0A_Init), (8 bytes).
+    Removing timer0a.o(.ARM.exidx.text.Timer0A_Handler), (8 bytes).
+    Removing timer0a.o(.text.Timer0A_Stop), (26 bytes).
+    Removing timer0a.o(.ARM.exidx.text.Timer0A_Stop), (8 bytes).
+    Removing timer1a.o(.text), (0 bytes).
+    Removing timer1a.o(.text.Timer1A_Init), (160 bytes).
+    Removing timer1a.o(.ARM.exidx.text.Timer1A_Init), (8 bytes).
+    Removing timer1a.o(.ARM.exidx.text.Timer1A_Handler), (8 bytes).
+    Removing timer1a.o(.text.Timer1A_ChangePeriod), (38 bytes).
+    Removing timer1a.o(.ARM.exidx.text.Timer1A_ChangePeriod), (8 bytes).
+    Removing timer1a.o(.text.Timer1A_Stop), (28 bytes).
+    Removing timer1a.o(.ARM.exidx.text.Timer1A_Stop), (8 bytes).
+    Removing pll.o(.text), (0 bytes).
+    Removing pll.o(.text.PLL_Init), (138 bytes).
+    Removing pll.o(.ARM.exidx.text.PLL_Init), (8 bytes).
+    Removing dmatimer.o(.text), (0 bytes).
+    Removing dmatimer.o(.text.Timer5A_Init), (176 bytes).
+    Removing dmatimer.o(.ARM.exidx.text.Timer5A_Init), (8 bytes).
+    Removing dmatimer.o(.text.DMA_Init), (216 bytes).
+    Removing dmatimer.o(.ARM.exidx.text.DMA_Init), (8 bytes).
+    Removing dmatimer.o(.text.DMA_Transfer), (140 bytes).
+    Removing dmatimer.o(.ARM.exidx.text.DMA_Transfer), (8 bytes).
+    Removing dmatimer.o(.ARM.exidx.text.setRegular), (8 bytes).
+    Removing dmatimer.o(.ARM.exidx.text.setAlternate), (8 bytes).
+    Removing dmatimer.o(.ARM.exidx.text.DMA_Stop), (8 bytes).
+    Removing dmatimer.o(.ARM.exidx.text.Timer5A_Handler), (8 bytes).
+    Removing dmatimer.o(.text.DMA_Status), (12 bytes).
+    Removing dmatimer.o(.ARM.exidx.text.DMA_Status), (8 bytes).
+    Removing neopixel.o(.text), (0 bytes).
+    Removing neopixel.o(.text.Delay), (34 bytes).
+    Removing neopixel.o(.ARM.exidx.text.Delay), (8 bytes).
+    Removing neopixel.o(.text.sendreset), (24 bytes).
+    Removing neopixel.o(.ARM.exidx.text.sendreset), (8 bytes).
+    Removing neopixel.o(.text.clearbuffer), (76 bytes).
+    Removing neopixel.o(.ARM.exidx.text.clearbuffer), (8 bytes).
+    Removing neopixel.o(.text.addColor), (464 bytes).
+    Removing neopixel.o(.ARM.exidx.text.addColor), (8 bytes).
+    Removing neopixel.o(.text.setcursor), (60 bytes).
+    Removing neopixel.o(.ARM.exidx.text.setcursor), (8 bytes).
+    Removing neopixel.o(.text.printBuffer), (26 bytes).
+    Removing neopixel.o(.ARM.exidx.text.printBuffer), (8 bytes).
+    Removing neopixel.o(.text.NeoPixel_Init), (212 bytes).
+    Removing neopixel.o(.ARM.exidx.text.NeoPixel_Init), (8 bytes).
+    Removing neopixel.o(.text.SetNeoNotes), (1534 bytes).
+    Removing neopixel.o(.ARM.exidx.text.SetNeoNotes), (8 bytes).
+    Removing neopixel.o(.text.setBrightness), (92 bytes).
+    Removing neopixel.o(.ARM.exidx.text.setBrightness), (8 bytes).
+    Removing neopixel.o(.text.runNeoTest), (138 bytes).
+    Removing neopixel.o(.ARM.exidx.text.runNeoTest), (8 bytes).
+    Removing neopixel.o(.bss.Cursor), (4 bytes).
+    Removing neopixel.o(.bss.Buffer), (1152 bytes).
+    Removing neopixel.o(.bss.Vol), (4 bytes).
+    Removing neopixel.o(.bss.old_Colors), (16 bytes).
+    Removing neopixel.o(.rodata.RGB), (156 bytes).
+    Removing graphics.o(.text), (0 bytes).
+    Removing graphics.o(.text.noteToChars), (242 bytes).
+    Removing graphics.o(.ARM.exidx.text.noteToChars), (8 bytes).
+    Removing graphics.o(.text.DrawFirstNote), (280 bytes).
+    Removing graphics.o(.ARM.exidx.text.DrawFirstNote), (8 bytes).
+    Removing graphics.o(.text.DrawSecondNote), (280 bytes).
+    Removing graphics.o(.ARM.exidx.text.DrawSecondNote), (8 bytes).
+    Removing graphics.o(.text.DrawThirdNote), (280 bytes).
+    Removing graphics.o(.ARM.exidx.text.DrawThirdNote), (8 bytes).
+    Removing graphics.o(.text.DrawFourthNote), (280 bytes).
+    Removing graphics.o(.ARM.exidx.text.DrawFourthNote), (8 bytes).
+    Removing graphics.o(.text.DrawFourNotes), (64 bytes).
+    Removing graphics.o(.ARM.exidx.text.DrawFourNotes), (8 bytes).
+    Removing graphics.o(.text.FlipMetronomeOn), (776 bytes).
+    Removing graphics.o(.ARM.exidx.text.FlipMetronomeOn), (8 bytes).
+    Removing graphics.o(.text.FlipMetronomeOff), (38 bytes).
+    Removing graphics.o(.ARM.exidx.text.FlipMetronomeOff), (8 bytes).
+    Removing graphics.o(.text.ArmMetroIndicator), (344 bytes).
+    Removing graphics.o(.ARM.exidx.text.ArmMetroIndicator), (8 bytes).
+    Removing graphics.o(.text.DrawSongMenu), (1794 bytes).
+    Removing graphics.o(.ARM.exidx.text.DrawSongMenu), (8 bytes).
+    Removing graphics.o(.text.MoveSongArrowDown), (140 bytes).
+    Removing graphics.o(.ARM.exidx.text.MoveSongArrowDown), (8 bytes).
+    Removing graphics.o(.text.MoveSongArrowUp), (142 bytes).
+    Removing graphics.o(.ARM.exidx.text.MoveSongArrowUp), (8 bytes).
+    Removing graphics.o(.text.DisplayNowPlaying), (1282 bytes).
+    Removing graphics.o(.ARM.exidx.text.DisplayNowPlaying), (8 bytes).
+    Removing graphics.o(.text.ClearOutNowPlaying), (24 bytes).
+    Removing graphics.o(.ARM.exidx.text.ClearOutNowPlaying), (8 bytes).
+    Removing graphics.o(.text.DrawInstrumentMenu), (1932 bytes).
+    Removing graphics.o(.ARM.exidx.text.DrawInstrumentMenu), (8 bytes).
+    Removing graphics.o(.text.MoveInstrumentArrowDown), (140 bytes).
+    Removing graphics.o(.ARM.exidx.text.MoveInstrumentArrowDown), (8 bytes).
+    Removing graphics.o(.text.MoveInstrumentArrowUp), (142 bytes).
+    Removing graphics.o(.ARM.exidx.text.MoveInstrumentArrowUp), (8 bytes).
+    Removing graphics.o(.text.DisplayInstrPlaying), (1466 bytes).
+    Removing graphics.o(.ARM.exidx.text.DisplayInstrPlaying), (8 bytes).
+    Removing graphics.o(.text.ClearOutInstrPlaying), (24 bytes).
+    Removing graphics.o(.ARM.exidx.text.ClearOutInstrPlaying), (8 bytes).
+    Removing graphics.o(.rodata.Colors), (26 bytes).
+    Removing graphics.o(.bss.songSelect), (4 bytes).
+    Removing graphics.o(.bss.instrumentSelect), (4 bytes).
+    Removing timer2a.o(.text), (0 bytes).
+    Removing timer2a.o(.ARM.exidx.text.Timer2A_Init), (8 bytes).
+    Removing timer2a.o(.ARM.exidx.text.Timer2A_Handler), (8 bytes).
+    Removing timer2a.o(.ARM.exidx.text.Timer2A_Stop), (8 bytes).
+    Removing timer3a.o(.text), (0 bytes).
+    Removing timer3a.o(.ARM.exidx.text.Timer3A_Init), (8 bytes).
+    Removing timer3a.o(.ARM.exidx.text.Timer3A_Handler), (8 bytes).
+    Removing timer3a.o(.ARM.exidx.text.Timer3A_Stop), (8 bytes).
+    Removing flexsensor.o(.text), (0 bytes).
+    Removing flexsensor.o(.text.Flex_Init), (8 bytes).
+    Removing flexsensor.o(.ARM.exidx.text.Flex_Init), (8 bytes).
+    Removing flexsensor.o(.text.Flex_Read), (98 bytes).
+    Removing flexsensor.o(.ARM.exidx.text.Flex_Read), (8 bytes).
+    Removing flexsensor.o(.text.Return_Note), (278 bytes).
+    Removing flexsensor.o(.ARM.exidx.text.Return_Note), (8 bytes).
+    Removing flexsensor.o(.text.Return_Chord), (272 bytes).
+    Removing flexsensor.o(.ARM.exidx.text.Return_Chord), (8 bytes).
+    Removing flexsensor.o(.text.Return_Volume), (80 bytes).
+    Removing flexsensor.o(.ARM.exidx.text.Return_Volume), (8 bytes).
+    Removing flexsensor.o(.bss.adc_data), (12 bytes).
+    Removing flexsensor.o(.bss.oldNote), (4 bytes).
+    Removing flexsensor.o(.bss.oldChord), (4 bytes).
+    Removing adcswtrigger.o(.text), (0 bytes).
+    Removing adcswtrigger.o(.text.ADC0_InitSWTriggerSeq3_Ch9), (270 bytes).
+    Removing adcswtrigger.o(.ARM.exidx.text.ADC0_InitSWTriggerSeq3_Ch9), (8 bytes).
+    Removing adcswtrigger.o(.text.ADC0_InitSWTriggerSeq3_Ch7), (270 bytes).
+    Removing adcswtrigger.o(.ARM.exidx.text.ADC0_InitSWTriggerSeq3_Ch7), (8 bytes).
+    Removing adcswtrigger.o(.text.ADC0_InitSWTriggerSeq3), (1140 bytes).
+    Removing adcswtrigger.o(.ARM.exidx.text.ADC0_InitSWTriggerSeq3), (8 bytes).
+    Removing adcswtrigger.o(.text.ADC0_InSeq3), (70 bytes).
+    Removing adcswtrigger.o(.ARM.exidx.text.ADC0_InSeq3), (8 bytes).
+    Removing adcswtrigger.o(.text.ADC_Init89), (244 bytes).
+    Removing adcswtrigger.o(.ARM.exidx.text.ADC_Init89), (8 bytes).
+    Removing adcswtrigger.o(.text.ADC_In89), (82 bytes).
+    Removing adcswtrigger.o(.ARM.exidx.text.ADC_In89), (8 bytes).
+    Removing adcswtrigger.o(.text.ADC0_InitSWTriggerSeq2), (268 bytes).
+    Removing adcswtrigger.o(.ARM.exidx.text.ADC0_InitSWTriggerSeq2), (8 bytes).
+    Removing adcswtrigger.o(.text.ADC0_InSeq2), (104 bytes).
+    Removing adcswtrigger.o(.ARM.exidx.text.ADC0_InSeq2), (8 bytes).
+    Removing adcswtrigger.o(.text.ADC0_InitSWTriggerSeq3_InternalTemperature), (156 bytes).
+    Removing adcswtrigger.o(.ARM.exidx.text.ADC0_InitSWTriggerSeq3_InternalTemperature), (8 bytes).
+    Removing adcswtrigger.o(.text.ADC0_InSeq3_InternalTemperature), (88 bytes).
+    Removing adcswtrigger.o(.ARM.exidx.text.ADC0_InSeq3_InternalTemperature), (8 bytes).
+    Removing adcswtrigger.o(.text.ADC_Init3210), (294 bytes).
+    Removing adcswtrigger.o(.ARM.exidx.text.ADC_Init3210), (8 bytes).
+    Removing adcswtrigger.o(.text.ADC_In3210), (92 bytes).
+    Removing adcswtrigger.o(.ARM.exidx.text.ADC_In3210), (8 bytes).
+    Removing adcswtrigger.o(.bss.UserTask2), (4 bytes).
+    Removing timer4a.o(.text), (0 bytes).
+    Removing timer4a.o(.ARM.exidx.text.Timer4A_Init), (8 bytes).
+    Removing timer4a.o(.ARM.exidx.text.Timer4A_Handler), (8 bytes).
+    Removing timer4a.o(.ARM.exidx.text.Timer4A_Stop), (8 bytes).
+
+490 unused section(s) (total 50839 bytes) removed from the image.

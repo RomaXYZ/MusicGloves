@@ -1,0 +1,24 @@
+--cpu=Cortex-M4 --fpu=SoftVFP
+".\objects\startup.o"
+".\objects\musicgloves.o"
+".\objects\launchpad.o"
+".\objects\texas.o"
+".\objects\st7735.o"
+".\objects\dac.o"
+".\objects\music.o"
+".\objects\buttons.o"
+".\objects\timer0a.o"
+".\objects\timer1a.o"
+".\objects\pll.o"
+".\objects\dmatimer.o"
+".\objects\neopixel.o"
+".\objects\graphics.o"
+".\objects\timer2a.o"
+".\objects\timer3a.o"
+".\objects\flexsensor.o"
+".\objects\adcswtrigger.o"
+".\objects\timer4a.o"
+--library_type=microlib --strict --scatter ".\Objects\Lab5.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\Lab5.map" -o .\Objects\Lab5.axf

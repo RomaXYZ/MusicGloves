@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE eagle SYSTEM "eagle.dtd">
+<eagle>
+    <drawing>
+        <grid unitdist="mm" unit="mm"/>
+        <layers>
+            <layer name="Top" color="4" number="1" visible="yes" active="yes" fill="1"/>
+            <layer name="Bottom" color="4" number="16" visible="yes" active="yes" fill="1"/>
+            <layer name="tPlace" color="7" number="21" visible="yes" active="yes" fill="1"/>
+            <layer name="bPlace" color="7" number="22" visible="yes" active="yes" fill="1"/>
+            <layer name="tNames" color="7" number="25" visible="yes" active="yes" fill="1"/>
+            <layer name="bNames" color="7" number="26" visible="yes" active="yes" fill="1"/>
+            <layer name="tValues" color="7" number="27" visible="yes" active="yes" fill="1"/>
+            <layer name="bValues" color="7" number="28" visible="yes" active="yes" fill="1"/>
+            <layer name="tStop" color="7" number="29" visible="yes" active="yes" fill="1"/>
+            <layer name="bStop" color="7" number="30" visible="yes" active="yes" fill="1"/>
+            <layer name="tCream" color="7" number="31" visible="yes" active="yes" fill="1"/>
+            <layer name="bCream" color="7" number="32" visible="yes" active="yes" fill="1"/>
+            <layer name="tKeepout" color="4" number="39" visible="yes" active="yes" fill="1"/>
+            <layer name="bKeepout" color="4" number="40" visible="yes" active="yes" fill="1"/>
+            <layer name="tRestrict" color="0" number="41" visible="yes" active="yes" fill="1"/>
+            <layer name="bRestrict" color="0" number="42" visible="yes" active="yes" fill="1"/>
+            <layer name="tDocu" color="7" number="51" visible="yes" active="yes" fill="1"/>
+            <layer name="bDocu" color="7" number="52" visible="yes" active="yes" fill="1"/>
+            <layer name="Nets" color="2" number="91" visible="yes" active="yes" fill="1"/>
+            <layer name="Busses" color="1" number="92" visible="yes" active="yes" fill="1"/>
+            <layer name="Pins" color="2" number="93" visible="yes" active="yes" fill="1"/>
+            <layer name="Symbols" color="4" number="94" visible="yes" active="yes" fill="1"/>
+            <layer name="Names" color="7" number="95" visible="yes" active="yes" fill="1"/>
+            <layer name="Values" color="7" number="96" visible="yes" active="yes" fill="1"/>
+            <layer name="Info" color="7" number="97" visible="yes" active="yes" fill="1"/>
+            <layer name="Guide" color="6" number="98" visible="yes" active="yes" fill="1"/>
+        </layers>
+        <library name="Upverter Library">
+            <description>Upverter Parts Library
+
+Created by Upverter.com</description>
+            <packages>
+                <package name="TEXAS_INSTRUMENTS_TLV5618AID_0">
+                    <description>TI-TLV561X_5638-8</description>
+                    <wire layer="21" y2="2.5" width="0.15" x2="-1.0" y1="-2.5" x1="-1.0"/>
+                    <wire layer="21" y2="2.5" width="0.15" x2="1.0" y1="-2.5" x1="1.0"/>
+                    <wire layer="21" y2="2.5" width="0.15" x2="1.0" y1="2.5" x1="-1.0"/>
+                    <wire layer="21" y2="-2.5" width="0.15" x2="1.0" y1="-2.5" x1="-1.0"/>
+                    <wire layer="51" y2="2.5" width="0.1" x2="-2.0" y1="-2.5" x1="-2.0"/>
+                    <wire layer="51" y2="2.5" width="0.1" x2="2.0" y1="-2.5" x1="2.0"/>
+                    <wire layer="51" y2="2.5" width="0.1" x2="2.0" y1="2.5" x1="-2.0"/>
+                    <wire layer="51" y2="-2.5" width="0.1" x2="2.0" y1="-2.5" x1="-2.0"/>
+                    <wire layer="39" y2="2.6" width="0.1" x2="-3.4" y1="-2.6" x1="-3.4"/>
+                    <wire layer="39" y2="2.6" width="0.1" x2="3.4" y1="2.6" x1="-3.4"/>
+                    <wire layer="39" y2="-2.6" width="0.1" x2="3.4" y1="2.6" x1="3.4"/>
+                    <wire layer="39" y2="-2.6" width="0.1" x2="-3.4" y1="-2.6" x1="3.4"/>
+                    <text layer="25" align="bottom-left" y="2.88" x="-4.4" rot="R0" size="1.0">&gt;NAME</text>
+                    <circle y="2.755" x="-2.35" layer="21" radius="0.125" width="0.25"/>
+                    <circle y="1.7" x="-0.2" layer="21" radius="0.2" width="0.4"/>
+                    <circle y="1.6" x="-1.1" layer="51" radius="0.5" width="0.1"/>
+                    <smd layer="1" thermals="yes" name="1" stop="yes" roundness="100" dx="0.6" dy="1.9" y="1.905" x="-2.35" rot="R90" cream="yes"/>
+                    <smd layer="1" thermals="yes" name="2" stop="yes" roundness="100" dx="0.6" dy="1.9" y="0.635" x="-2.35" rot="R90" cream="yes"/>
+                    <smd layer="1" thermals="yes" name="3" stop="yes" roundness="100" dx="0.6" dy="1.9" y="-0.635" x="-2.35" rot="R90" cream="yes"/>
+                    <smd layer="1" thermals="yes" name="4" stop="yes" roundness="100" dx="0.6" dy="1.9" y="-1.905" x="-2.35" rot="R90" cream="yes"/>
+                    <smd layer="1" thermals="yes" name="8" stop="yes" roundness="100" dx="0.6" dy="1.9" y="1.905" x="2.35" rot="R90" cream="yes"/>
+                    <smd layer="1" thermals="yes" name="7" stop="yes" roundness="100" dx="0.6" dy="1.9" y="0.635" x="2.35" rot="R90" cream="yes"/>
+                    <smd layer="1" thermals="yes" name="6" stop="yes" roundness="100" dx="0.6" dy="1.9" y="-0.635" x="2.35" rot="R90" cream="yes"/>
+                    <smd layer="1" thermals="yes" name="5" stop="yes" roundness="100" dx="0.6" dy="1.9" y="-1.905" x="2.35" rot="R90" cream="yes"/>
+                </package>
+                <package name="TEXAS_INSTRUMENTS_TLV5618AID_1">
+                    <description>TI-TLV561X_5638-8</description>
+                    <wire layer="21" y2="-2.5" width="0.15" x2="0.9" y1="-2.5" x1="-0.9"/>
+                    <wire layer="21" y2="2.5" width="0.15" x2="0.9" y1="2.5" x1="-0.9"/>
+                    <wire layer="21" y2="2.5" width="0.15" x2="0.9" y1="-2.5" x1="0.9"/>
+                    <wire layer="21" y2="2.5" width="0.15" x2="-0.9" y1="-2.5" x1="-0.9"/>
+                    <wire layer="51" y2="-2.5" width="0.1" x2="2.0" y1="-2.5" x1="-2.0"/>
+                    <wire layer="51" y2="2.5" width="0.1" x2="2.0" y1="2.5" x1="-2.0"/>
+                    <wire layer="51" y2="2.5" width="0.1" x2="2.0" y1="-2.5" x1="2.0"/>
+                    <wire layer="51" y2="2.5" width="0.1" x2="-2.0" y1="-2.5" x1="-2.0"/>
+                    <wire layer="39" y2="2.75" width="0.1" x2="-3.75" y1="-2.75" x1="-3.75"/>
+                    <wire layer="39" y2="2.75" width="0.1" x2="3.75" y1="2.75" x1="-3.75"/>
+                    <wire layer="39" y2="-2.75" width="0.1" x2="3.75" y1="2.75" x1="3.75"/>
+                    <wire layer="39" y2="-2.75" width="0.1" x2="-3.75" y1="-2.75" x1="3.75"/>
+                    <text layer="25" align="bottom-left" y="2.88" x="-4.75" rot="R0" size="1.0">&gt;NAME</text>
+                    <circle y="1.7" x="-0.1" layer="21" radius="0.2" width="0.4"/>
+                    <circle y="2.755" x="-2.4" layer="21" radius="0.125" width="0.25"/>
+                    <circle y="1.6" x="-1.1" layer="51" radius="0.5" width="0.1"/>
+                    <smd layer="1" thermals="yes" name="5" stop="yes" roundness="100" dx="0.6" dy="2.2" y="-1.905" x="2.4" rot="R90" cream="yes"/>
+                    <smd layer="1" thermals="yes" name="6" stop="yes" roundness="100" dx="0.6" dy="2.2" y="-0.635" x="2.4" rot="R90" cream="yes"/>
+                    <smd layer="1" thermals="yes" name="7" stop="yes" roundness="100" dx="0.6" dy="2.2" y="0.635" x="2.4" rot="R90" cream="yes"/>
+                    <smd layer="1" thermals="yes" name="8" stop="yes" roundness="100" dx="0.6" dy="2.2" y="1.905" x="2.4" rot="R90" cream="yes"/>
+                    <smd layer="1" thermals="yes" name="4" stop="yes" roundness="100" dx="0.6" dy="2.2" y="-1.905" x="-2.4" rot="R90" cream="yes"/>
+                    <smd layer="1" thermals="yes" name="3" stop="yes" roundness="100" dx="0.6" dy="2.2" y="-0.635" x="-2.4" rot="R90" cream="yes"/>
+                    <smd layer="1" thermals="yes" name="2" stop="yes" roundness="100" dx="0.6" dy="2.2" y="0.635" x="-2.4" rot="R90" cream="yes"/>
+                    <smd layer="1" thermals="yes" name="1" stop="yes" roundness="100" dx="0.6" dy="2.2" y="1.905" x="-2.4" rot="R90" cream="yes"/>
+                </package>
+                <package name="TEXAS_INSTRUMENTS_TLV5618AID_2">
+                    <description>TI-TLV561X_5638-8</description>
+                    <wire layer="21" y2="-2.5" width="0.15" x2="0.8" y1="-2.5" x1="-0.8"/>
+                    <wire layer="21" y2="2.5" width="0.15" x2="0.8" y1="2.5" x1="-0.8"/>
+                    <wire layer="21" y2="2.5" width="0.15" x2="0.8" y1="-2.5" x1="0.8"/>
+                    <wire layer="21" y2="2.5" width="0.15" x2="-0.8" y1="-2.5" x1="-0.8"/>
+                    <wire layer="51" y2="-2.5" width="0.1" x2="2.0" y1="-2.5" x1="-2.0"/>
+                    <wire layer="51" y2="2.5" width="0.1" x2="2.0" y1="2.5" x1="-2.0"/>
+                    <wire layer="51" y2="2.5" width="0.1" x2="2.0" y1="-2.5" x1="2.0"/>
+                    <wire layer="51" y2="2.5" width="0.1" x2="-2.0" y1="-2.5" x1="-2.0"/>
+                    <wire layer="39" y2="3.0" width="0.1" x2="-4.2" y1="-3.0" x1="-4.2"/>
+                    <wire layer="39" y2="3.0" width="0.1" x2="4.2" y1="3.0" x1="-4.2"/>
+                    <wire layer="39" y2="-3.0" width="0.1" x2="4.2" y1="3.0" x1="4.2"/>
+                    <wire layer="39" y2="-3.0" width="0.1" x2="-4.2" y1="-3.0" x1="4.2"/>
+                    <text layer="25" align="bottom-left" y="3.0" x="-5.2" rot="R0" size="1.0">&gt;NAME</text>
+                    <circle y="2.805" x="-2.45" layer="21" radius="0.125" width="0.25"/>
+                    <circle y="1.6" x="-1.1" layer="51" radius="0.5" width="0.1"/>
+                    <smd layer="1" thermals="yes" name="5" stop="yes" roundness="100" dx="0.7" dy="2.5" y="-1.905" x="2.45" rot="R90" cream="yes"/>
+                    <smd layer="1" thermals="yes" name="6" stop="yes" roundness="100" dx="0.7" dy="2.5" y="-0.635" x="2.45" rot="R90" cream="yes"/>
+                    <smd layer="1" thermals="yes" name="7" stop="yes" roundness="100" dx="0.7" dy="2.5" y="0.635" x="2.45" rot="R90" cream="yes"/>
+                    <smd layer="1" thermals="yes" name="8" stop="yes" roundness="100" dx="0.7" dy="2.5" y="1.905" x="2.45" rot="R90" cream="yes"/>
+                    <smd layer="1" thermals="yes" name="4" stop="yes" roundness="100" dx="0.7" dy="2.5" y="-1.905" x="-2.45" rot="R90" cream="yes"/>
+                    <smd layer="1" thermals="yes" name="3" stop="yes" roundness="100" dx="0.7" dy="2.5" y="-0.635" x="-2.45" rot="R90" cream="yes"/>
+                    <smd layer="1" thermals="yes" name="2" stop="yes" roundness="100" dx="0.7" dy="2.5" y="0.635" x="-2.45" rot="R90" cream="yes"/>
+                    <smd layer="1" thermals="yes" name="1" stop="yes" roundness="100" dx="0.7" dy="2.5" y="1.905" x="-2.45" rot="R90" cream="yes"/>
+                </package>
+            </packages>
+            <symbols>
+                <symbol name="TEXAS_INSTRUMENTS_TLV5618AID_0_0">
+                    <description>TI-TLV561X_5638-8</description>
+                    <wire layer="94" y2="-5.08" width="0.508" x2="0.0" y1="-22.86" x1="0.0"/>
+                    <wire layer="94" y2="-5.08" width="0.508" x2="20.32" y1="-5.08" x1="0.0"/>
+                    <wire layer="94" y2="-22.86" width="0.508" x2="20.32" y1="-5.08" x1="20.32"/>
+                    <wire layer="94" y2="-22.86" width="0.508" x2="0.0" y1="-22.86" x1="20.32"/>
+                    <wire layer="94" y2="-10.16" width="0.15" x2="0.0" y1="-10.16" x1="0.0"/>
+                    <wire layer="94" y2="-7.62" width="0.15" x2="0.0" y1="-7.62" x1="0.0"/>
+                    <wire layer="94" y2="-12.7" width="0.15" x2="0.0" y1="-12.7" x1="0.0"/>
+                    <wire layer="94" y2="-7.62" width="0.15" x2="20.32" y1="-7.62" x1="20.32"/>
+                    <wire layer="94" y2="-20.32" width="0.15" x2="20.32" y1="-20.32" x1="20.32"/>
+                    <wire layer="94" y2="-15.24" width="0.15" x2="20.32" y1="-15.24" x1="20.32"/>
+                    <wire layer="94" y2="-10.16" width="0.15" x2="20.32" y1="-10.16" x1="20.32"/>
+                    <wire layer="94" y2="-20.32" width="0.15" x2="0.0" y1="-20.32" x1="0.0"/>
+                    <text layer="95" align="top-left" y="-2.54" x="0.0" rot="R0" size="2.54">&gt;NAME</text>
+                    <text layer="95" align="top-left" y="-27.94" x="0.0" rot="R0" size="2.54">TLV5618AID</text>
+                    <pin direction="in" name="DIN" visible="both" length="middle" y="-10.16" x="-5.08"/>
+                    <pin direction="in" name="SCLK" visible="both" length="middle" y="-7.62" x="-5.08"/>
+                    <pin direction="in" name="!CS!" visible="both" length="middle" y="-12.7" x="-5.08"/>
+                    <pin direction="out" name="OUTA" visible="both" length="middle" y="-7.62" x="25.4" rot="R180"/>
+                    <pin direction="pwr" name="AGND" visible="both" length="middle" y="-20.32" x="25.4" rot="R180"/>
+                    <pin direction="in" name="REF" visible="both" length="middle" y="-15.24" x="25.4" rot="R180"/>
+                    <pin direction="out" name="OUTB" visible="both" length="middle" y="-10.16" x="25.4" rot="R180"/>
+                    <pin direction="pwr" name="VDD" visible="both" length="middle" y="-20.32" x="-5.08"/>
+                </symbol>
+            </symbols>
+            <devicesets>
+                <deviceset prefix="U" name="TEXAS_INSTRUMENTS_TLV5618AID">
+                    <description>TI-TLV561X_5638-8</description>
+                    <gates>
+                        <gate name="G$0" symbol="TEXAS_INSTRUMENTS_TLV5618AID_0_0" x="0"/>
+                    </gates>
+                    <devices>
+                        <device name="TEXAS_INSTRUMENTS_TLV5618AID_0_0" package="TEXAS_INSTRUMENTS_TLV5618AID_0">
+                            <connects>
+                                <connect gate="G$0" pad="1" pin="DIN"/>
+                                <connect gate="G$0" pad="2" pin="SCLK"/>
+                                <connect gate="G$0" pad="3" pin="!CS!"/>
+                                <connect gate="G$0" pad="4" pin="OUTA"/>
+                                <connect gate="G$0" pad="5" pin="AGND"/>
+                                <connect gate="G$0" pad="6" pin="REF"/>
+                                <connect gate="G$0" pad="7" pin="OUTB"/>
+                                <connect gate="G$0" pad="8" pin="VDD"/>
+                            </connects>
+                            <technologies>
+                                <technology>
+                                    <attribute name="ciiva_ids" value="1089365"/>
+                                    <attribute name="prefix" value="U"/>
+                                    <attribute name="Package_Version" value="4040047-3/M, 06/2011"/>
+                                    <attribute name="Component_Link_1_Description" value="Manufacturer URL"/>
+                                    <attribute name="vault_guid" value="013B0FB3-B93C-4793-8784-9A2B0464A527"/>
+                                    <attribute name="Sub_Family" value="Precision DAC (=&lt;10MSPS)"/>
+                                    <attribute name="SFDRd_B" value="72"/>
+                                    <attribute name="Mounting_Technology" value="Surface Mount"/>
+                                    <attribute name="MPN" value="TLV5618AID"/>
+                                    <attribute name="Component_Link_1_URL" value="http://www.ti.com/"/>
+                                    <attribute name="imported" value="yes"/>
+                                    <attribute name="import_ts" value="1521848973"/>
+                                    <attribute name="Component_Link_3_Description" value="Package Specification"/>
+                                    <attribute name="Datasheet_Version" value="SLAS230H"/>
+                                    <attribute name="Code__JEDEC" value="MS-012"/>
+                                    <attribute name="release_date" value="1386925073"/>
+                                    <attribute name="datasheet" value="http://www.ti.com/general/docs/lit/getliterature.tsp?genericPartNumber=TLV5618A&amp;fileType=pdf"/>
+                                    <attribute name="DAC_Channels" value="2"/>
+                                    <attribute name="vault_revision" value="B618AF77-08DF-4618-A484-169F78FA430F"/>
+                                    <attribute name="pin_0_0_1_inside_edge" value="clock"/>
+                                    <attribute name="INL_Max__LSB" value="4"/>
+                                    <attribute name="SNRd_B" value="76"/>
+                                    <attribute name="Package_Description" value="8-Pin Plastic Small Outline, Body 4.9 x 3.9 mm, Pitch 1.27 mm"/>
+                                    <attribute name="footprint_variant_name_2" value="Level A"/>
+                                    <attribute name="imported_from" value="vault"/>
+                                    <attribute name="rohs" value="Yes"/>
+                                    <attribute name="DNL_Max__LSB" value="1"/>
+                                    <attribute name="Resolution_Bits" value="12"/>
+                                    <attribute name="Settling_Timeus" value="3"/>
+                                    <attribute name="footprint_variant_name_0" value="Level C"/>
+                                    <attribute name="Interface" value="Serial SPI"/>
+                                    <attribute name="footprint_variant_name_1" value="Level B"/>
+                                    <attribute name="Power_ConsumptionTypmW" value="1.8"/>
+                                    <attribute name="MF" value="Texas Instruments"/>
+                                    <attribute name="package" value="D8"/>
+                                    <attribute name="Component_Link_3_URL" value="http://www.ti.com/litv/pdf/msoi002j"/>
+                                </technology>
+                            </technologies>
+                        </device>
+                        <device name="TEXAS_INSTRUMENTS_TLV5618AID_0_1" package="TEXAS_INSTRUMENTS_TLV5618AID_1">
+                            <connects>
+                                <connect gate="G$0" pad="1" pin="DIN"/>
+                                <connect gate="G$0" pad="2" pin="SCLK"/>
+                                <connect gate="G$0" pad="3" pin="!CS!"/>
+                                <connect gate="G$0" pad="4" pin="OUTA"/>
+                                <connect gate="G$0" pad="5" pin="AGND"/>
+                                <connect gate="G$0" pad="6" pin="REF"/>
+                                <connect gate="G$0" pad="7" pin="OUTB"/>
+                                <connect gate="G$0" pad="8" pin="VDD"/>
+                            </connects>
+                            <technologies>
+                                <technology>
+                                    <attribute name="ciiva_ids" value="1089365"/>
+                                    <attribute name="prefix" value="U"/>
+                                    <attribute name="Package_Version" value="4040047-3/M, 06/2011"/>
+                                    <attribute name="Component_Link_1_Description" value="Manufacturer URL"/>
+                                    <attribute name="vault_guid" value="013B0FB3-B93C-4793-8784-9A2B0464A527"/>
+                                    <attribute name="Sub_Family" value="Precision DAC (=&lt;10MSPS)"/>
+                                    <attribute name="SFDRd_B" value="72"/>
+                                    <attribute name="Mounting_Technology" value="Surface Mount"/>
+                                    <attribute name="MPN" value="TLV5618AID"/>
+                                    <attribute name="Component_Link_1_URL" value="http://www.ti.com/"/>
+                                    <attribute name="imported" value="yes"/>
+                                    <attribute name="import_ts" value="1521848973"/>
+                                    <attribute name="Component_Link_3_Description" value="Package Specification"/>
+                                    <attribute name="Datasheet_Version" value="SLAS230H"/>
+                                    <attribute name="Code__JEDEC" value="MS-012"/>
+                                    <attribute name="release_date" value="1386925073"/>
+                                    <attribute name="datasheet" value="http://www.ti.com/general/docs/lit/getliterature.tsp?genericPartNumber=TLV5618A&amp;fileType=pdf"/>
+                                    <attribute name="DAC_Channels" value="2"/>
+                                    <attribute name="vault_revision" value="B618AF77-08DF-4618-A484-169F78FA430F"/>
+                                    <attribute name="pin_0_0_1_inside_edge" value="clock"/>
+                                    <attribute name="INL_Max__LSB" value="4"/>
+                                    <attribute name="SNRd_B" value="76"/>
+                                    <attribute name="Package_Description" value="8-Pin Plastic Small Outline, Body 4.9 x 3.9 mm, Pitch 1.27 mm"/>
+                                    <attribute name="footprint_variant_name_2" value="Level A"/>
+                                    <attribute name="imported_from" value="vault"/>
+                                    <attribute name="rohs" value="Yes"/>
+                                    <attribute name="DNL_Max__LSB" value="1"/>
+                                    <attribute name="Resolution_Bits" value="12"/>
+                                    <attribute name="Settling_Timeus" value="3"/>
+                                    <attribute name="footprint_variant_name_0" value="Level C"/>
+                                    <attribute name="Interface" value="Serial SPI"/>
+                                    <attribute name="footprint_variant_name_1" value="Level B"/>
+                                    <attribute name="Power_ConsumptionTypmW" value="1.8"/>
+                                    <attribute name="MF" value="Texas Instruments"/>
+                                    <attribute name="package" value="D8"/>
+                                    <attribute name="Component_Link_3_URL" value="http://www.ti.com/litv/pdf/msoi002j"/>
+                                </technology>
+                            </technologies>
+                        </device>
+                        <device name="TEXAS_INSTRUMENTS_TLV5618AID_0_2" package="TEXAS_INSTRUMENTS_TLV5618AID_2">
+                            <connects>
+                                <connect gate="G$0" pad="1" pin="DIN"/>
+                                <connect gate="G$0" pad="2" pin="SCLK"/>
+                                <connect gate="G$0" pad="3" pin="!CS!"/>
+                                <connect gate="G$0" pad="4" pin="OUTA"/>
+                                <connect gate="G$0" pad="5" pin="AGND"/>
+                                <connect gate="G$0" pad="6" pin="REF"/>
+                                <connect gate="G$0" pad="7" pin="OUTB"/>
+                                <connect gate="G$0" pad="8" pin="VDD"/>
+                            </connects>
+                            <technologies>
+                                <technology>
+                                    <attribute name="ciiva_ids" value="1089365"/>
+                                    <attribute name="prefix" value="U"/>
+                                    <attribute name="Package_Version" value="4040047-3/M, 06/2011"/>
+                                    <attribute name="Component_Link_1_Description" value="Manufacturer URL"/>
+                                    <attribute name="vault_guid" value="013B0FB3-B93C-4793-8784-9A2B0464A527"/>
+                                    <attribute name="Sub_Family" value="Precision DAC (=&lt;10MSPS)"/>
+                                    <attribute name="SFDRd_B" value="72"/>
+                                    <attribute name="Mounting_Technology" value="Surface Mount"/>
+                                    <attribute name="MPN" value="TLV5618AID"/>
+                                    <attribute name="Component_Link_1_URL" value="http://www.ti.com/"/>
+                                    <attribute name="imported" value="yes"/>
+                                    <attribute name="import_ts" value="1521848973"/>
+                                    <attribute name="Component_Link_3_Description" value="Package Specification"/>
+                                    <attribute name="Datasheet_Version" value="SLAS230H"/>
+                                    <attribute name="Code__JEDEC" value="MS-012"/>
+                                    <attribute name="release_date" value="1386925073"/>
+                                    <attribute name="datasheet" value="http://www.ti.com/general/docs/lit/getliterature.tsp?genericPartNumber=TLV5618A&amp;fileType=pdf"/>
+                                    <attribute name="DAC_Channels" value="2"/>
+                                    <attribute name="vault_revision" value="B618AF77-08DF-4618-A484-169F78FA430F"/>
+                                    <attribute name="pin_0_0_1_inside_edge" value="clock"/>
+                                    <attribute name="INL_Max__LSB" value="4"/>
+                                    <attribute name="SNRd_B" value="76"/>
+                                    <attribute name="Package_Description" value="8-Pin Plastic Small Outline, Body 4.9 x 3.9 mm, Pitch 1.27 mm"/>
+                                    <attribute name="footprint_variant_name_2" value="Level A"/>
+                                    <attribute name="imported_from" value="vault"/>
+                                    <attribute name="rohs" value="Yes"/>
+                                    <attribute name="DNL_Max__LSB" value="1"/>
+                                    <attribute name="Resolution_Bits" value="12"/>
+                                    <attribute name="Settling_Timeus" value="3"/>
+                                    <attribute name="footprint_variant_name_0" value="Level C"/>
+                                    <attribute name="Interface" value="Serial SPI"/>
+                                    <attribute name="footprint_variant_name_1" value="Level B"/>
+                                    <attribute name="Power_ConsumptionTypmW" value="1.8"/>
+                                    <attribute name="MF" value="Texas Instruments"/>
+                                    <attribute name="package" value="D8"/>
+                                    <attribute name="Component_Link_3_URL" value="http://www.ti.com/litv/pdf/msoi002j"/>
+                                </technology>
+                            </technologies>
+                        </device>
+                    </devices>
+                </deviceset>
+            </devicesets>
+        </library>
+    </drawing>
+</eagle>
